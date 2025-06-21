@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rich Minds - Your Golden Partner in UAE</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+      <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+      <div class="container">
+        <a
+          class="navbar-brand"
+          href="#"
+          data-en="Rich Minds"
+          data-ar="ريتش مايندز"
+          >Rich Minds</a
+        >
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="#home"
+                data-en="Home"
+                data-ar="الرئيسية"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about" data-en="About" data-ar="من نحن"
+                >About</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="servicesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                data-en="Services"
+                data-ar="خدماتنا"
+                >Services</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-en="Golden Visa"
+                    data-ar="الإقامة الذهبية"
+                    >Golden Visa</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-en="Business Setup"
+                    data-ar="تأسيس الشركات"
+                    >Business Setup</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-en="PRO Services"
+                    data-ar="خدمات PRO"
+                    >PRO Services</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="contact.html"
+                data-en="Contact Us"
+                data-ar="تواصل معنا"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+
+          <button class="language-toggle" onclick="toggleLanguage()">
+            <i class="fas fa-globe"></i> <span id="langText">عربي</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="hero-bg-animation"></div>
+
+      <!-- Image Slider Background -->
+      <div class="hero-slider">
+        <div
+          class="slide active"
+          style="background-image: url('img/burj-al-arab.jpg')"
+        ></div>
+        <div class="slide" style="background-image: url('img/duba.jpg')"></div>
+        <div
+          class="slide"
+          style="
+            background-image: url('img/vecteezy_the-city-skyline-at-night-in-dubai-ai-generated_33390792[1].jpg');
+          "
+        ></div>
+      </div>
+
+      <!-- Slider Navigation -->
+      <div class="slider-nav">
+        <button class="slider-btn active" onclick="changeSlide(0)"></button>
+        <button class="slider-btn" onclick="changeSlide(1)"></button>
+        <button class="slider-btn" onclick="changeSlide(2)"></button>
+      </div>
+
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="hero-content">
+              <div class="hero-badge">
+                <span data-en="Dubai Based Company" data-ar="شركة مقرها دبي"
+                  >Dubai Based Company</span
+                >
+              </div>
+              <h1
+                class="hero-title"
+                data-en="Welcome to Rich Minds"
+                data-ar="مرحبًا بكم في ريتش مايندز"
+              >
+                Welcome to Rich Minds
+              </h1>
+              <p
+                class="hero-subtitle"
+                data-en="Your Golden Partner for Business, Residency, and Success in the UAE"
+                data-ar="شريكك الذهبي للإقامة وتأسيس الأعمال والنجاح في دولة الإمارات"
+              >
+                Your Golden Partner for Business, Residency, and Success in the
+                UAE
+              </p>
+              <p
+                class="hero-description"
+                data-en="Rich Minds is your trusted gateway to the UAE. We provide expert guidance and full support for:"
+                data-ar="ريتش مايندز هي وجهتك الموثوقة للانطلاق بثقة في الإمارات. نقدم لك استشارات متخصصة ودعمًا متكاملاً في:"
+              >
+                Rich Minds is your trusted gateway to the UAE. We provide expert
+                guidance and full support for:
+              </p>
+
+              <ul class="services-list">
+                <li>
+                  <i class="fas fa-award"></i>
+                  <span
+                    data-en="UAE Golden Visa Assistance"
+                    data-ar="الحصول على الإقامة الذهبية في الإمارات"
+                    >UAE Golden Visa Assistance</span
+                  >
+                </li>
+                <li>
+                  <i class="fas fa-building"></i>
+                  <span
+                    data-en="Business Setup & Company Formation"
+                    data-ar="تأسيس الشركات واستشارات رجال الأعمال"
+                    >Business Setup & Company Formation</span
+                  >
+                </li>
+                <li>
+                  <i class="fas fa-file-alt"></i>
+                  <span
+                    data-en="Government PRO & Document Clearance Services"
+                    data-ar="تخليص المعاملات والخدمات الحكومية"
+                    >Government PRO & Document Clearance Services</span
+                  >
+                </li>
+              </ul>
+
+              <div class="hero-buttons">
+                <a
+                  href="#contact"
+                  class="cta-button primary"
+                  data-en="Get Started Today"
+                  data-ar="ابدأ رحلتك اليوم"
+                  >Get Started Today</a
+                >
+                <a
+                  href="tel:+971501234567"
+                  class="cta-button secondary"
+                  data-en="Call Now"
+                  data-ar="اتصل الآن"
+                  >Call Now</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-image">
+              <div class="floating-card">
+                <div class="card-icon">
+                  <i class="fas fa-passport"></i>
+                </div>
+                <h3 data-en="Golden Visa" data-ar="الإقامة الذهبية">
+                  Golden Visa
+                </h3>
+                <p
+                  data-en="5-10 Years Validity"
+                  data-ar="صالحة لمدة 5-10 سنوات"
+                >
+                  5-10 Years Validity
+                </p>
+              </div>
+
+              <div class="floating-card card-2">
+                <div class="card-icon">
+                  <i class="fas fa-handshake"></i>
+                </div>
+                <h3 data-en="Business Setup" data-ar="تأسيس الأعمال">
+                  Business Setup
+                </h3>
+                <p data-en="Fast & Reliable" data-ar="سريع وموثوق">
+                  Fast & Reliable
+                </p>
+              </div>
+
+              <div class="floating-card card-3">
+                <div class="card-icon">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 data-en="100% Legal" data-ar="قانوني 100%">100% Legal</h3>
+                <p data-en="Government Approved" data-ar="معتمد حكومياً">
+                  Government Approved
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="about" class="why-choose-section">
+      <div class="container">
+        <h2
+          class="section-title"
+          data-en="Why Choose Rich Minds?"
+          data-ar="لماذا تختار Rich Minds؟"
+        >
+          Why Choose Rich Minds?
+        </h2>
+
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3
+                class="feature-title"
+                data-en="100% Confidential and Reliable"
+                data-ar="خصوصية كاملة وثقة عالية"
+              >
+                100% Confidential and Reliable
+              </h3>
+              <p
+                class="feature-description"
+                data-en="Your privacy and trust are our top priorities. We ensure complete confidentiality in all our services."
+                data-ar="خصوصيتك وثقتك هما أولوياتنا القصوى. نضمن السرية التامة في جميع خدماتنا."
+              >
+                Your privacy and trust are our top priorities. We ensure
+                complete confidentiality in all our services.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <h3
+                class="feature-title"
+                data-en="Fast-track Government Processing"
+                data-ar="إنجاز سريع لجميع المعاملات"
+              >
+                Fast-track Government Processing
+              </h3>
+              <p
+                class="feature-description"
+                data-en="We expedite all government procedures to save your time and ensure quick results."
+                data-ar="نسرّع جميع الإجراءات الحكومية لتوفير وقتك وضمان النتائج السريعة."
+              >
+                We expedite all government procedures to save your time and
+                ensure quick results.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-cogs"></i>
+              </div>
+              <h3
+                class="feature-title"
+                data-en="End-to-End Business & Visa Solutions"
+                data-ar="حلول شاملة للأعمال والإقامات"
+              >
+                End-to-End Business & Visa Solutions
+              </h3>
+              <p
+                class="feature-description"
+                data-en="Complete solutions for all your business and visa needs under one roof."
+                data-ar="حلول متكاملة لجميع احتياجاتك في الأعمال والإقامات تحت سقف واحد."
+              >
+                Complete solutions for all your business and visa needs under
+                one roof.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h3
+                class="feature-title"
+                data-en="Strategic Location in Dubai"
+                data-ar="موقع استراتيجي في دبي"
+              >
+                Strategic Location in Dubai
+              </h3>
+              <p
+                class="feature-description"
+                data-en="Perfectly positioned in Dubai to serve clients across the UAE and internationally."
+                data-ar="موقع مثالي في دبي لخدمة العملاء في الإمارات وحول العالم."
+              >
+                Perfectly positioned in Dubai to serve clients across the UAE
+                and internationally.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <h3
+                class="feature-title"
+                data-en="Personalized Professional Support"
+                data-ar="فريق متعدد اللغات وخبرة طويلة"
+              >
+                Personalized Professional Support
+              </h3>
+              <p
+                class="feature-description"
+                data-en="Our multilingual team provides personalized support tailored to your specific needs."
+                data-ar="فريقنا متعدد اللغات يقدم دعماً شخصياً مصمماً خصيصاً لاحتياجاتك."
+              >
+                Our multilingual team provides personalized support tailored to
+                your specific needs.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <i class="fas fa-globe"></i>
+              </div>
+              <h3
+                class="feature-title"
+                data-en="International Reach"
+                data-ar="نخدم العملاء حول العالم"
+              >
+                International Reach
+              </h3>
+              <p
+                class="feature-description"
+                data-en="Based in Dubai, serving clients across the UAE and internationally with expertise."
+                data-ar="مقرنا في دبي، ونخدم العملاء في الإمارات وحول العالم بخبرة عالية."
+              >
+                Based in Dubai, serving clients across the UAE and
+                internationally with expertise.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="faq-content">
+              <h2
+                class="section-title"
+                data-en="Frequently Asked Questions"
+                data-ar="الأسئلة الشائعة"
+              >
+                Frequently Asked Questions
+              </h2>
+              <p
+                class="faq-subtitle"
+                data-en="Find answers to common questions about our services"
+                data-ar="اعثر على إجابات للأسئلة الشائعة حول خدماتنا"
+              >
+                Find answers to common questions about our services
+              </p>
+
+              <!-- FAQ Search -->
+              <div class="faq-search">
+                <input
+                  type="text"
+                  placeholder="Search questions..."
+                  data-en-placeholder="Search questions..."
+                  data-ar-placeholder="ابحث في الأسئلة..."
+                  id="faqSearch"
+                />
+                <i class="fas fa-search"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="faq-image">
+              <img
+                src="img/pexels-yankrukov-8867482[1].jpg"
+                alt="FAQ Support"
+                class="img-fluid rounded"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item" data-category="visa">
+            <h2 class="accordion-header" id="faq1">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse1"
+              >
+                <div class="faq-icon">
+                  <i class="fas fa-passport"></i>
+                </div>
+                <span
+                  data-en="What is the UAE Golden Visa?"
+                  data-ar="ما هي الإقامة الذهبية في الإمارات؟"
+                  >What is the UAE Golden Visa?</span
+                >
+              </button>
+            </h2>
+            <div
+              id="collapse1"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                <span
+                  data-en="The UAE Golden Visa is a long-term residence visa that enables foreign talents to live, work, and study in the UAE without the need for a sponsor. It's valid for 5 or 10 years and is renewable."
+                  data-ar="الإقامة الذهبية في الإمارات هي تأشيرة إقامة طويلة الأمد تمكن المواهب الأجنبية من العيش والعمل والدراسة في الإمارات دون الحاجة لكفيل. صالحة لمدة 5 أو 10 سنوات وقابلة للتجديد."
+                  >The UAE Golden Visa is a long-term residence visa that
+                  enables foreign talents to live, work, and study in the UAE
+                  without the need for a sponsor. It's valid for 5 or 10 years
+                  and is renewable.</span
+                >
+                <div class="faq-tags">
+                  <span
+                    class="tag"
+                    data-en="Golden Visa"
+                    data-ar="الإقامة الذهبية"
+                    >Golden Visa</span
+                  >
+                  <span class="tag" data-en="Long-term" data-ar="طويلة الأمد"
+                    >Long-term</span
+                  >
+                  <span class="tag" data-en="No Sponsor" data-ar="بدون كفيل"
+                    >No Sponsor</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-category="business">
+            <h2 class="accordion-header" id="faq2">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse2"
+              >
+                <div class="faq-icon">
+                  <i class="fas fa-building"></i>
+                </div>
+                <span
+                  data-en="How long does business setup take?"
+                  data-ar="كم من الوقت يستغرق تأسيس الشركة؟"
+                  >How long does business setup take?</span
+                >
+              </button>
+            </h2>
+            <div
+              id="collapse2"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                <span
+                  data-en="Business setup in the UAE typically takes 3-7 working days, depending on the type of license and jurisdiction. We ensure fast-track processing for all our clients."
+                  data-ar="تأسيس الشركات في الإمارات يستغرق عادة من 3-7 أيام عمل، حسب نوع الرخصة والمنطقة الحرة. نضمن المعالجة السريعة لجميع عملائنا."
+                  >Business setup in the UAE typically takes 3-7 working days,
+                  depending on the type of license and jurisdiction. We ensure
+                  fast-track processing for all our clients.</span
+                >
+                <div class="faq-tags">
+                  <span
+                    class="tag"
+                    data-en="Business Setup"
+                    data-ar="تأسيس الأعمال"
+                    >Business Setup</span
+                  >
+                  <span class="tag" data-en="3-7 Days" data-ar="3-7 أيام"
+                    >3-7 Days</span
+                  >
+                  <span class="tag" data-en="Fast Track" data-ar="معالجة سريعة"
+                    >Fast Track</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-category="documents">
+            <h2 class="accordion-header" id="faq3">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse3"
+              >
+                <div class="faq-icon">
+                  <i class="fas fa-file-alt"></i>
+                </div>
+                <span
+                  data-en="What documents do I need for Golden Visa?"
+                  data-ar="ما هي المستندات المطلوبة للإقامة الذهبية؟"
+                  >What documents do I need for Golden Visa?</span
+                >
+              </button>
+            </h2>
+            <div
+              id="collapse3"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                <span
+                  data-en="Required documents vary by category but typically include passport copies, educational certificates, professional qualifications, medical insurance, and proof of funds. We'll guide you through the complete list."
+                  data-ar="المستندات المطلوبة تختلف حسب الفئة ولكن تشمل عادة نسخ جواز السفر، الشهادات التعليمية، المؤهلات المهنية، التأمين الطبي، وإثبات الأموال. سنرشدك خلال القائمة الكاملة."
+                  >Required documents vary by category but typically include
+                  passport copies, educational certificates, professional
+                  qualifications, medical insurance, and proof of funds. We'll
+                  guide you through the complete list.</span
+                >
+                <div class="faq-tags">
+                  <span class="tag" data-en="Documents" data-ar="مستندات"
+                    >Documents</span
+                  >
+                  <span class="tag" data-en="Passport" data-ar="جواز سفر"
+                    >Passport</span
+                  >
+                  <span class="tag" data-en="Certificates" data-ar="شهادات"
+                    >Certificates</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-category="support">
+            <h2 class="accordion-header" id="faq4">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse4"
+              >
+                <div class="faq-icon">
+                  <i class="fas fa-headset"></i>
+                </div>
+                <span
+                  data-en="Do you provide support in Arabic?"
+                  data-ar="هل تقدمون الدعم باللغة العربية؟"
+                  >Do you provide support in Arabic?</span
+                >
+              </button>
+            </h2>
+            <div
+              id="collapse4"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                <span
+                  data-en="Yes, we have a multilingual team that provides full support in Arabic, English, and other languages to ensure clear communication throughout your journey."
+                  data-ar="نعم، لدينا فريق متعدد اللغات يقدم الدعم الكامل باللغة العربية والإنجليزية ولغات أخرى لضمان التواصل الواضح طوال رحلتك."
+                  >Yes, we have a multilingual team that provides full support
+                  in Arabic, English, and other languages to ensure clear
+                  communication throughout your journey.</span
+                >
+                <div class="faq-tags">
+                  <span
+                    class="tag"
+                    data-en="Multilingual"
+                    data-ar="متعدد اللغات"
+                    >Multilingual</span
+                  >
+                  <span class="tag" data-en="Arabic" data-ar="عربي"
+                    >Arabic</span
+                  >
+                  <span class="tag" data-en="24/7 Support" data-ar="دعم 24/7"
+                    >24/7 Support</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-category="cost">
+            <h2 class="accordion-header" id="faq5">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse5"
+              >
+                <div class="faq-icon">
+                  <i class="fas fa-dollar-sign"></i>
+                </div>
+                <span
+                  data-en="What are the costs involved?"
+                  data-ar="ما هي التكاليف المرتبطة بالخدمات؟"
+                  >What are the costs involved?</span
+                >
+              </button>
+            </h2>
+            <div
+              id="collapse5"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                <span
+                  data-en="Costs vary depending on the service type and requirements. We provide transparent pricing with no hidden fees. Contact us for a detailed quote tailored to your needs."
+                  data-ar="تختلف التكاليف حسب نوع الخدمة والمتطلبات. نقدم أسعاراً شفافة بدون رسوم خفية. تواصل معنا للحصول على عرض أسعار مفصل مناسب لاحتياجاتك."
+                  >Costs vary depending on the service type and requirements. We
+                  provide transparent pricing with no hidden fees. Contact us
+                  for a detailed quote tailored to your needs.</span
+                >
+                <div class="faq-tags">
+                  <span class="tag" data-en="Transparent" data-ar="شفاف"
+                    >Transparent</span
+                  >
+                  <span
+                    class="tag"
+                    data-en="No Hidden Fees"
+                    data-ar="بدون رسوم خفية"
+                    >No Hidden Fees</span
+                  >
+                  <span
+                    class="tag"
+                    data-en="Custom Quote"
+                    data-ar="عرض سعر مخصص"
+                    >Custom Quote</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item" data-category="timeline">
+            <h2 class="accordion-header" id="faq6">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse6"
+              >
+                <div class="faq-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <span
+                  data-en="How long does Golden Visa processing take?"
+                  data-ar="كم من الوقت تستغرق معالجة الإقامة الذهبية؟"
+                  >How long does Golden Visa processing take?</span
+                >
+              </button>
+            </h2>
+            <div
+              id="collapse6"
+              class="accordion-collapse collapse"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                <span
+                  data-en="Golden Visa processing typically takes 2-4 weeks from submission of complete documents. We track your application and provide regular updates throughout the process."
+                  data-ar="تستغرق معالجة الإقامة الذهبية عادة من 2-4 أسابيع من تاريخ تقديم المستندات الكاملة. نتتبع طلبك ونقدم تحديثات منتظمة طوال العملية."
+                  >Golden Visa processing typically takes 2-4 weeks from
+                  submission of complete documents. We track your application
+                  and provide regular updates throughout the process.</span
+                >
+                <div class="faq-tags">
+                  <span class="tag" data-en="2-4 Weeks" data-ar="2-4 أسابيع"
+                    >2-4 Weeks</span
+                  >
+                  <span class="tag" data-en="Tracking" data-ar="تتبع"
+                    >Tracking</span
+                  >
+                  <span class="tag" data-en="Updates" data-ar="تحديثات"
+                    >Updates</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-contact-box">
+          <h3 data-en="Still have questions?" data-ar="لا تزال لديك أسئلة؟">
+            Still have questions?
+          </h3>
+          <p
+            data-en="Contact our expert team for personalized assistance"
+            data-ar="تواصل مع فريق الخبراء لدينا للحصول على مساعدة شخصية"
+          >
+            Contact our expert team for personalized assistance
+          </p>
+          <a href="https://wa.me/971501234567" class="cta-button primary">
+            <i class="fab fa-whatsapp"></i>
+            <span data-en="Chat with Expert" data-ar="تحدث مع خبير"
+              >Chat with Expert</span
+            >
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5" style="background: var(--gradient-blue)">
+      <div class="container text-center">
+        <h2
+          class="section-title text-white mb-4"
+          data-en="Ready to Get Started?"
+          data-ar="جاهز للبدء؟"
+        >
+          Ready to Get Started?
+        </h2>
+        <p
+          class="text-white mb-4"
+          data-en="Contact us today and let's build your future in the UAE together."
+          data-ar="تواصل معنا اليوم لنصنع معًا مستقبلك في الإمارات."
+        >
+          Contact us today and let's build your future in the UAE together.
+        </p>
+        <a
+          href="https://wa.me/971501234567"
+          class="cta-button"
+          data-en="Contact Us Now"
+          data-ar="تواصل معنا الآن"
+          >Contact Us Now</a
+        >
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p
+          data-en="Based in Dubai – Serving clients across the UAE and internationally."
+          data-ar="مقرنا في دبي – ونخدم العملاء في الإمارات وحول العالم."
+        >
+          Based in Dubai – Serving clients across the UAE and internationally.
+        </p>
+
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <p>
+          &copy; 2024 Rich Minds.
+          <span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة."
+            >All rights reserved.</span
+          >
+        </p>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/971501234567" class="whatsapp-float" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

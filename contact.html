@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Rich Minds | اتصل بنا - ريتش مايندز</title>
+    <meta
+      name="description"
+      content="Contact Rich Minds for UAE Golden Visa, Business Setup, and Government Services. Located in Dubai, UAE. تواصل مع ريتش مايندز للإقامة الذهبية وتأسيس الشركات والخدمات الحكومية في دبي."
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+      <div class="container">
+        <a
+          class="navbar-brand"
+          href="index.html"
+          data-en="Rich Minds"
+          data-ar="ريتش مايندز"
+          >Rich Minds</a
+        >
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="index.html#home"
+                data-en="Home"
+                data-ar="الرئيسية"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="index.html#about"
+                data-en="About"
+                data-ar="من نحن"
+                >About</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="servicesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                data-en="Services"
+                data-ar="خدماتنا"
+                >Services</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-en="Golden Visa"
+                    data-ar="الإقامة الذهبية"
+                    >Golden Visa</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-en="Business Setup"
+                    data-ar="تأسيس الشركات"
+                    >Business Setup</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-en="PRO Services"
+                    data-ar="خدمات PRO"
+                    >PRO Services</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="contact.html"
+                data-en="Contact Us"
+                data-ar="تواصل معنا"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+
+          <button class="language-toggle" onclick="toggleLanguage()">
+            <i class="fas fa-globe"></i> <span id="langText">عربي</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+      <!-- Floating Elements -->
+      <div class="floating-elements">
+        <div class="floating-icon"><i class="fas fa-phone"></i></div>
+        <div class="floating-icon"><i class="fas fa-envelope"></i></div>
+        <div class="floating-icon"><i class="fas fa-map-marker-alt"></i></div>
+        <div class="floating-icon"><i class="fas fa-clock"></i></div>
+      </div>
+
+      <div class="container">
+        <div class="contact-hero-content">
+          <h1
+            data-en="Contact Us – Rich Minds"
+            data-ar="اتصل بنا – ريتش مايندز"
+          >
+            Contact Us – Rich Minds
+          </h1>
+          <p
+            data-en="We're here to help you every step of the way."
+            data-ar="نحن هنا لدعمك في كل خطوة من رحلتك."
+          >
+            We're here to help you every step of the way.
+          </p>
+          <p
+            data-en="Whether you're looking for assistance with the UAE Golden Visa, starting your business, or managing government transactions, our team is ready to support you."
+            data-ar="سواء كنت تبحث عن إقامة ذهبية، أو تأسيس شركتك، أو تخليص معاملاتك الحكومية – فريقنا مستعد لخدمتك بسرعة وكفاءة."
+          >
+            Whether you're looking for assistance with the UAE Golden Visa,
+            starting your business, or managing government transactions, our
+            team is ready to support you.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Main Section -->
+    <section class="contact-main">
+      <div class="container">
+        <div class="row">
+          <!-- Contact Information -->
+          <div class="col-lg-4 col-md-6">
+            <div class="contact-info-card">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h3
+                class="contact-info-title"
+                data-en="Our Office"
+                data-ar="موقعنا"
+              >
+                Our Office
+              </h3>
+              <p
+                class="contact-info-text"
+                data-en="Meydan Grandstand, 6th Floor, Meydan Road, Nad Al Sheba, Dubai, UAE"
+                data-ar="الطابق السادس، ميدان غراندستاند، شارع الميدان، ند الشبا، دبي – الإمارات العربية المتحدة"
+              >
+                Meydan Grandstand, 6th Floor, Meydan Road, Nad Al Sheba, Dubai,
+                UAE
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="contact-info-card">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <h3
+                class="contact-info-title"
+                data-en="Phone & Email"
+                data-ar="الهاتف والبريد الإلكتروني"
+              >
+                Phone & Email
+              </h3>
+              <p class="contact-info-text">
+                <strong data-en="Phone:" data-ar="الهاتف:">Phone:</strong>
+                <a
+                  href="tel:+971561475759"
+                  style="color: var(--primary-blue); text-decoration: none"
+                  >+971 56 147 5759</a
+                >
+              </p>
+              <p class="contact-info-text">
+                <strong data-en="Email:" data-ar="البريد الإلكتروني:"
+                  >Email:</strong
+                >
+                <a
+                  href="mailto:info@richminds.ae"
+                  style="color: var(--primary-blue); text-decoration: none"
+                  >info@richminds.ae</a
+                >
+              </p>
+              <p class="contact-info-text">
+                <strong data-en="Website:" data-ar="الموقع الإلكتروني:"
+                  >Website:</strong
+                >
+                <a
+                  href="https://www.richminds.ae"
+                  style="color: var(--primary-blue); text-decoration: none"
+                  >www.richminds.ae</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-12">
+            <div class="contact-info-card">
+              <div class="contact-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <h3
+                class="contact-info-title"
+                data-en="Working Hours"
+                data-ar="ساعات العمل"
+              >
+                Working Hours
+              </h3>
+              <p class="contact-info-text">
+                <strong data-en="Sunday – Thursday" data-ar="الأحد – الخميس"
+                  >Sunday – Thursday</strong
+                ><br />
+                <span
+                  data-en="9:00 AM – 6:00 PM"
+                  data-ar="من 9:00 صباحًا حتى 6:00 مساءً"
+                  >9:00 AM – 6:00 PM</span
+                >
+              </p>
+              <p class="contact-info-text">
+                <strong data-en="Friday & Saturday" data-ar="الجمعة والسبت"
+                  >Friday & Saturday</strong
+                ><br />
+                <span data-en="Closed" data-ar="عطلة">Closed</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form and Map Row -->
+        <div class="row mt-5">
+          <div class="col-lg-8">
+            <div class="contact-form-container">
+              <h3
+                class="mb-4"
+                data-en="Send us a Message"
+                data-ar="أرسل لنا رسالة"
+              >
+                Send us a Message
+              </h3>
+              <p
+                class="mb-4"
+                data-en="Fill out the contact form and we'll get back to you shortly."
+                data-ar="قم بتعبئة نموذج الاتصال وسنقوم بالتواصل معك في أقرب وقت."
+              >
+                Fill out the contact form and we'll get back to you shortly.
+              </p>
+
+              <div class="success-message" id="successMessage">
+                <i class="fas fa-check-circle me-2"></i>
+                <span
+                  data-en="Thank you! Your message has been sent successfully. We'll get back to you soon."
+                  data-ar="شكرًا لك! تم إرسال رسالتك بنجاح. سنتواصل معك قريبًا."
+                >
+                  Thank you! Your message has been sent successfully. We'll get
+                  back to you soon.
+                </span>
+              </div>
+
+              <div class="error-message" id="errorMessage">
+                <i class="fas fa-exclamation-triangle me-2"></i>
+                <span
+                  data-en="Sorry, there was an error sending your message. Please try again or contact us directly."
+                  data-ar="عذرًا، حدث خطأ في إرسال رسالتك. يرجى المحاولة مرة أخرى أو التواصل معنا مباشرة."
+                >
+                  Sorry, there was an error sending your message. Please try
+                  again or contact us directly.
+                </span>
+              </div>
+
+              <form id="contactForm" novalidate>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label
+                        class="form-label"
+                        data-en="Full Name *"
+                        data-ar="الاسم الكامل *"
+                        >Full Name *</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="fullName"
+                        required
+                        data-en-placeholder="Enter your full name"
+                        data-ar-placeholder="أدخل اسمك الكامل"
+                        placeholder="Enter your full name"
+                      />
+                      <div
+                        class="invalid-feedback"
+                        data-en="Please provide your full name."
+                        data-ar="يرجى إدخال اسمك الكامل."
+                      >
+                        Please provide your full name.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label
+                        class="form-label"
+                        data-en="Phone Number *"
+                        data-ar="رقم الهاتف *"
+                        >Phone Number *</label
+                      >
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="phone"
+                        required
+                        data-en-placeholder="Enter your phone number"
+                        data-ar-placeholder="أدخل رقم هاتفك"
+                        placeholder="Enter your phone number"
+                      />
+                      <div
+                        class="invalid-feedback"
+                        data-en="Please provide a valid phone number."
+                        data-ar="يرجى إدخال رقم هاتف صحيح."
+                      >
+                        Please provide a valid phone number.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label
+                        class="form-label"
+                        data-en="Email Address *"
+                        data-ar="البريد الإلكتروني *"
+                        >Email Address *</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        required
+                        data-en-placeholder="Enter your email address"
+                        data-ar-placeholder="أدخل بريدك الإلكتروني"
+                        placeholder="Enter your email address"
+                      />
+                      <div
+                        class="invalid-feedback"
+                        data-en="Please provide a valid email address."
+                        data-ar="يرجى إدخال بريد إلكتروني صحيح."
+                      >
+                        Please provide a valid email address.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label
+                        class="form-label"
+                        data-en="Service Interest"
+                        data-ar="الخدمة المهتم بها"
+                        >Service Interest</label
+                      >
+                      <select class="form-control" id="service">
+                        <option
+                          value=""
+                          data-en="Select a service"
+                          data-ar="اختر خدمة"
+                        >
+                          Select a service
+                        </option>
+                        <option
+                          value="golden-visa"
+                          data-en="UAE Golden Visa"
+                          data-ar="الإقامة الذهبية"
+                        >
+                          UAE Golden Visa
+                        </option>
+                        <option
+                          value="business-setup"
+                          data-en="Business Setup"
+                          data-ar="تأسيس الشركات"
+                        >
+                          Business Setup
+                        </option>
+                        <option
+                          value="pro-services"
+                          data-en="PRO Services"
+                          data-ar="خدمات PRO"
+                        >
+                          PRO Services
+                        </option>
+                        <option
+                          value="consultation"
+                          data-en="General Consultation"
+                          data-ar="استشارة عامة"
+                        >
+                          General Consultation
+                        </option>
+                        <option value="other" data-en="Other" data-ar="أخرى">
+                          Other
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label
+                    class="form-label"
+                    data-en="Message *"
+                    data-ar="الرسالة *"
+                    >Message *</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    rows="5"
+                    required
+                    data-en-placeholder="Tell us how we can help you..."
+                    data-ar-placeholder="أخبرنا كيف يمكننا مساعدتك..."
+                    placeholder="Tell us how we can help you..."
+                  ></textarea>
+                  <div
+                    class="invalid-feedback"
+                    data-en="Please provide your message."
+                    data-ar="يرجى كتابة رسالتك."
+                  >
+                    Please provide your message.
+                  </div>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                  <span
+                    class="btn-text"
+                    data-en="Send Message"
+                    data-ar="إرسال الرسالة"
+                    >Send Message</span
+                  >
+                  <i class="fas fa-paper-plane ms-2"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="map-container">
+              <div class="text-center">
+                <i
+                  class="fas fa-map-marked-alt"
+                  style="
+                    font-size: 3rem;
+                    color: var(--primary-gold);
+                    margin-bottom: 1rem;
+                  "
+                ></i>
+                <p
+                  data-en="Interactive Map Coming Soon"
+                  data-ar="الخريطة التفاعلية قريباً"
+                >
+                  Interactive Map Coming Soon
+                </p>
+                <p
+                  class="small"
+                  data-en="Meydan Grandstand, Dubai"
+                  data-ar="ميدان غراندستاند، دبي"
+                >
+                  Meydan Grandstand, Dubai
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p
+          data-en="Based in Dubai – Serving clients across the UAE and internationally."
+          data-ar="مقرنا في دبي – ونخدم العملاء في الإمارات وحول العالم."
+        >
+          Based in Dubai – Serving clients across the UAE and internationally.
+        </p>
+
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+
+        <p>
+          &copy; 2024 Rich Minds.
+          <span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة."
+            >All rights reserved.</span
+          >
+        </p>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/971561475759" class="whatsapp-float" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Premium Animation Enhancement Script -->
+    <script>
+      // Premium Animation Features
+
+      // Magnetic Effect for Interactive Elements
+      function initMagneticButtons() {
+        const magneticElements = document.querySelectorAll(
+          ".submit-btn, .whatsapp-cta, .call-cta, .contact-icon"
+        );
+
+        magneticElements.forEach((element) => {
+          element.addEventListener("mousemove", (e) => {
+            const rect = element.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+
+            element.style.transform = `translate(${x * 0.15}px, ${
+              y * 0.15
+            }px) scale(1.05)`;
+            element.style.transition = "transform 0.1s ease-out";
+          });
+
+          element.addEventListener("mouseleave", () => {
+            element.style.transform = "translate(0px, 0px) scale(1)";
+            element.style.transition = "transform 0.3s ease-out";
+          });
+        });
+      }
+
+      // Advanced Typing Effect
+      function createTypingEffect() {
+        const heroTitle = document.querySelector(".contact-hero h1");
+        if (heroTitle) {
+          const text = heroTitle.textContent;
+          heroTitle.textContent = "";
+
+          let i = 0;
+          const typeInterval = setInterval(() => {
+            heroTitle.textContent += text.charAt(i);
+            i++;
+
+            if (i >= text.length) {
+              clearInterval(typeInterval);
+              // Add cursor blink effect
+              heroTitle.style.borderRight = "3px solid var(--primary-gold)";
+              setTimeout(() => {
+                heroTitle.style.borderRight = "none";
+              }, 2000);
+            }
+          }, 100);
+        }
+      }
+
+      // 3D Card Hover Effects
+      function init3DCards() {
+        document.querySelectorAll(".contact-info-card").forEach((card) => {
+          card.addEventListener("mousemove", (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            const rotateX = (y - centerY) / 8;
+            const rotateY = (centerX - x) / 8;
+
+            card.style.transform = `
+              perspective(1000px) 
+              rotateX(${rotateX}deg) 
+              rotateY(${rotateY}deg) 
+              translateY(-10px) 
+              scale(1.02)
+            `;
+            card.style.boxShadow = "0 25px 80px rgba(0, 0, 0, 0.2)";
+          });
+
+          card.addEventListener("mouseleave", () => {
+            card.style.transform =
+              "perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px) scale(1)";
+            card.style.boxShadow = "";
+          });
+        });
+      }
+
+      // Dynamic Floating Elements
+      function createFloatingElements() {
+        const hero = document.querySelector(".contact-hero");
+        const icons = [
+          "fas fa-star",
+          "fas fa-heart",
+          "fas fa-gem",
+          "fas fa-award",
+        ];
+
+        setInterval(() => {
+          if (Math.random() > 0.7) {
+            const element = document.createElement("div");
+            element.innerHTML = `<i class="${
+              icons[Math.floor(Math.random() * icons.length)]
+            }"></i>`;
+            element.style.cssText = `
+              position: absolute;
+              top: 100%;
+              left: ${Math.random() * 100}%;
+              color: rgba(221, 189, 127, 0.4);
+              font-size: ${Math.random() * 1 + 0.5}rem;
+              animation: floatUp 8s linear forwards;
+              pointer-events: none;
+              z-index: 1;
+            `;
+
+            hero.appendChild(element);
+
+            setTimeout(() => {
+              element.remove();
+            }, 8000);
+          }
+        }, 2000);
+      }
+
+      // Enhanced Form Interactions
+      function enhanceFormAnimations() {
+        const form = document.getElementById("contactForm");
+        const inputs = form.querySelectorAll(".form-control");
+
+        inputs.forEach((input) => {
+          // Focus wave effect
+          input.addEventListener("focus", function () {
+            const wave = document.createElement("div");
+            wave.style.cssText = `
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(45deg, transparent, rgba(221, 189, 127, 0.1), transparent);
+              border-radius: 15px;
+              animation: waveEffect 1s ease-out;
+              pointer-events: none;
+              z-index: -1;
+            `;
+
+            this.parentElement.appendChild(wave);
+
+            setTimeout(() => {
+              wave.remove();
+            }, 1000);
+          });
+
+          // Success pulse effect
+          input.addEventListener("input", function () {
+            if (this.checkValidity() && this.value.length > 0) {
+              this.style.animation = "successPulse 0.5s ease-out";
+              setTimeout(() => {
+                this.style.animation = "";
+              }, 500);
+            }
+          });
+        });
+      }
+
+      // Scroll-triggered Animations
+      function initScrollAnimations() {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate-visible");
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px",
+          }
+        );
+
+        // Observe all animatable elements
+        document
+          .querySelectorAll(
+            ".contact-info-card, .form-group, .contact-info-text"
+          )
+          .forEach((el) => {
+            el.classList.add("animate-hidden");
+            observer.observe(el);
+          });
+      }
+
+      // Background Animation
+      function initBackgroundAnimation() {
+        const hero = document.querySelector(".contact-hero");
+
+        // Create animated background overlay
+        const overlay = document.createElement("div");
+        overlay.style.cssText = `
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(45deg, 
+            rgba(221, 189, 127, 0.1) 0%,
+            transparent 25%,
+            rgba(55, 105, 131, 0.1) 50%,
+            transparent 75%,
+            rgba(221, 189, 127, 0.1) 100%
+          );
+          background-size: 400% 400%;
+          animation: gradientShift 15s ease-in-out infinite;
+          pointer-events: none;
+          z-index: 2;
+        `;
+
+        hero.appendChild(overlay);
+      }
+
+      // Add all animation CSS
+      const animationCSS = document.createElement("style");
+      animationCSS.textContent = `
+        @keyframes floatUp {
+          0% {
+            transform: translateY(0) rotate(0deg);
+            opacity: 0;
+          }
+          10% {
+            opacity: 0.8;
+          }
+          90% {
+            opacity: 0.8;
+          }
+          100% {
+            transform: translateY(-100vh) rotate(360deg);
+            opacity: 0;
+          }
+        }
+        
+        @keyframes waveEffect {
+          0% {
+            transform: translateX(-100%);
+            opacity: 0;
+          }
+          50% {
+            opacity: 1;
+          }
+          100% {
+            transform: translateX(100%);
+            opacity: 0;
+          }
+        }
+        
+        @keyframes successPulse {
+          0% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.4);
+          }
+          50% {
+            transform: scale(1.02);
+            box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+          }
+          100% {
+            transform: scale(1);
+            box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+          }
+        }
+        
+        @keyframes gradientShift {
+          0% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
+          100% {
+            background-position: 0% 50%;
+          }
+        }
+        
+        .animate-hidden {
+          opacity: 0;
+          transform: translateY(50px);
+          transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .animate-visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        
+        .contact-hero {
+          background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.8) 0%, rgba(55, 105, 131, 0.7) 100%), 
+                           url('img/pexels-kindelmedia-7979605[1].jpg');
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
+        }
+        
+        @media (max-width: 768px) {
+          .contact-hero {
+            background-attachment: scroll;
+          }
+        }
+      `;
+      document.head.appendChild(animationCSS);
+
+      // Initialize all premium features
+      document.addEventListener("DOMContentLoaded", function () {
+        // Add delay to ensure all elements are loaded
+        setTimeout(() => {
+          initMagneticButtons();
+          init3DCards();
+          enhanceFormAnimations();
+          initScrollAnimations();
+          initBackgroundAnimation();
+
+          // Start dynamic elements
+          setTimeout(() => {
+            createFloatingElements();
+            createTypingEffect();
+          }, 1000);
+        }, 500);
+      });
+
+      console.log("🎨✨ Premium Contact Page Animations Loaded!");
+      console.log(
+        "🚀 Features: 3D Effects, Magnetic Interactions, Dynamic Background, Scroll Animations"
+      );
+    </script>
+  </body>
+</html>
