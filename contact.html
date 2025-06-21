@@ -28,6 +28,10 @@
     <link rel="stylesheet" href="css/contact.css" />
   </head>
   <body>
+    <!-- Loading Overlay -->
+     <div class="loading-overlay" id="loadingOverlay">
+      <div class="loading-spinner"></div>
+    </div>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
       <div class="container">
@@ -60,7 +64,7 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about" data-en="About" data-ar="من نحن"
+              <a class="nav-link" href="about.html" data-en="About" data-ar="من نحن"
                 >About</a
               >
             </li>
@@ -508,66 +512,78 @@
     </section>
 
       <!-- Footer -->
-    <footer class="footer">
+   <footer class="footer">
       <div class="container">
-        <div class="row">
-          <!-- Logo Section -->
-          <div class="col-lg-5 col-md-6 mb-4">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
             <div class="footer-section">
-              <h4 class="footer-title">Rich Minds</h4>
-              <p class="footer-text">
-                <span
-                  data-en="Your trusted partner for business consultancy and strategic solutions across the UAE and internationally."
-                  data-ar="شريكك الموثوق للاستشارات التجارية والحلول الاستراتيجية في الإمارات وعالمياً."
-                >
-                  Your trusted partner for business consultancy and strategic
-                  solutions across the UAE and internationally.
-                </span>
+              <h3
+                class="footer-title"
+                data-en="Rich Minds"
+                data-ar="ريتش مايندز"
+              >
+                Rich Minds
+              </h3>
+              <p
+                class="footer-text"
+                data-en="Your trusted partner for UAE business, residency, and success. We transform your aspirations into achievements."
+                data-ar="شريكك الموثوق للأعمال والإقامة والنجاح في الإمارات. نحول طموحاتك إلى إنجازات."
+              >
+                Your trusted partner for UAE business, residency, and success.
+                We transform your aspirations into achievements.
               </p>
               <div class="footer-social">
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" aria-label="Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" aria-label="LinkedIn"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a href="#" aria-label="Twitter"
+                  ><i class="fab fa-twitter"></i
+                ></a>
               </div>
             </div>
           </div>
-
-          <!-- Navigation Links -->
-          <div class="col-lg-4 col-md-6 mb-4">
+          <div class="col-lg-2 col-md-6">
             <div class="footer-section">
-              <h5
+              <h4
                 class="footer-subtitle"
-                data-en="QUICK LINKS"
+                data-en="Quick Links"
                 data-ar="روابط سريعة"
               >
-                QUICK LINKS
-              </h5>
+                Quick Links
+              </h4>
               <ul class="footer-links">
                 <li>
-                  <a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
+                  <a href="index.html" data-en="Home" data-ar="الرئيسية"
+                    >Home</a
+                  >
                 </li>
                 <li>
-                  <a href="#about" data-en="About" data-ar="من نحن">About</a>
+                  <a href="about.html" data-en="About" data-ar="من نحن"
+                    >About</a
+                  >
                 </li>
                 <li>
-                  <a
-                    href="contact.html"
-                    data-en="Contact Us"
-                    data-ar="تواصل معنا"
-                    >Contact Us</a
+                  <a href="#" data-en="Services" data-ar="الخدمات">Services</a>
+                </li>
+                <li>
+                  <a href="contact.html" data-en="Contact" data-ar="اتصل بنا"
+                    >Contact</a
                   >
                 </li>
               </ul>
             </div>
           </div>
-
-          <!-- Services Section -->
-          <div class="col-lg-3 col-md-6 mb-4">
+          <div class="col-lg-3 col-md-6">
             <div class="footer-section">
-              <h5 class="footer-subtitle" data-en="SERVICES" data-ar="خدماتنا">
-                SERVICES
-              </h5>
+              <h4 class="footer-subtitle" data-en="Services" data-ar="خدماتنا">
+                Services
+              </h4>
               <ul class="footer-links">
                 <li>
                   <a href="#" data-en="Golden Visa" data-ar="الإقامة الذهبية"
@@ -584,31 +600,54 @@
                     >PRO Services</a
                   >
                 </li>
+                <li>
+                  <a href="#" data-en="Consultancy" data-ar="الاستشارات"
+                    >Consultancy</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-section">
+              <h4
+                class="footer-subtitle"
+                data-en="Contact Info"
+                data-ar="معلومات التواصل"
+              >
+                Contact Info
+              </h4>
+              <div class="contact-info">
+                <p>
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span data-en="Dubai, UAE" data-ar="دبي، الإمارات"
+                    >Dubai, UAE</span
+                  >
+                </p>
+                <p><i class="fas fa-phone"></i> +971 50 123 4567</p>
+                <p><i class="fas fa-envelope"></i> info@richminds.ae</p>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <!-- Copyright -->
         <div class="footer-bottom">
           <div class="row align-items-center">
-            <div class="col-md-6 col-12">
-              <p class="copyright-text">
-                &copy;
-                <span
-                  data-en="Copyright 2024, All Rights Reserved by Rich Minds"
-                  data-ar="حقوق الطبع والنشر 2024، جميع الحقوق محفوظة لشركة ريتش مايندز"
-                  >Copyright 2024, All Rights Reserved by Rich Minds</span
-                >
+            <div class="col-md-6">
+              <p
+                class="copyright-text"
+                data-en="© 2024 Rich Minds. All rights reserved."
+                data-ar="© 2024 ريتش مايندز. جميع الحقوق محفوظة."
+              >
+                © 2024 Rich Minds. All rights reserved.
               </p>
             </div>
-            <div class="col-md-6 col-12">
-              <p class="designer-credit">
-                <span
-                  data-en="Designed by GWT Company"
-                  data-ar="مصمم من قبل شركة GWT"
-                  >Designed by GWT Company</span
-                >
+            <div class="col-md-6">
+              <p
+                class="designer-credit"
+                data-en="Designed with GWT for your success"
+                data-ar="مصمم بـ GWT من أجل نجاحك"
+              >
+                Designed with GWT for your success
               </p>
             </div>
           </div>
