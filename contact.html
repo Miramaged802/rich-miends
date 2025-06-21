@@ -33,7 +33,7 @@
       <div class="container">
         <a
           class="navbar-brand"
-          href="index.html"
+          href="#"
           data-en="Rich Minds"
           data-ar="ريتش مايندز"
           >Rich Minds</a
@@ -53,18 +53,14 @@
             <li class="nav-item">
               <a
                 class="nav-link"
-                href="index.html#home"
+                href="index.html"
                 data-en="Home"
                 data-ar="الرئيسية"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link"
-                href="index.html#about"
-                data-en="About"
-                data-ar="من نحن"
+              <a class="nav-link" href="#about" data-en="About" data-ar="من نحن"
                 >About</a
               >
             </li>
@@ -511,29 +507,112 @@
       </div>
     </section>
 
-    <!-- Footer -->
+      <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <p
-          data-en="Based in Dubai – Serving clients across the UAE and internationally."
-          data-ar="مقرنا في دبي – ونخدم العملاء في الإمارات وحول العالم."
-        >
-          Based in Dubai – Serving clients across the UAE and internationally.
-        </p>
+        <div class="row">
+          <!-- Logo Section -->
+          <div class="col-lg-5 col-md-6 mb-4">
+            <div class="footer-section">
+              <h4 class="footer-title">Rich Minds</h4>
+              <p class="footer-text">
+                <span
+                  data-en="Your trusted partner for business consultancy and strategic solutions across the UAE and internationally."
+                  data-ar="شريكك الموثوق للاستشارات التجارية والحلول الاستراتيجية في الإمارات وعالمياً."
+                >
+                  Your trusted partner for business consultancy and strategic
+                  solutions across the UAE and internationally.
+                </span>
+              </p>
+              <div class="footer-social">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
 
-        <div class="social-links">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
+          <!-- Navigation Links -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="footer-section">
+              <h5
+                class="footer-subtitle"
+                data-en="QUICK LINKS"
+                data-ar="روابط سريعة"
+              >
+                QUICK LINKS
+              </h5>
+              <ul class="footer-links">
+                <li>
+                  <a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
+                </li>
+                <li>
+                  <a href="#about" data-en="About" data-ar="من نحن">About</a>
+                </li>
+                <li>
+                  <a
+                    href="contact.html"
+                    data-en="Contact Us"
+                    data-ar="تواصل معنا"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Services Section -->
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="footer-section">
+              <h5 class="footer-subtitle" data-en="SERVICES" data-ar="خدماتنا">
+                SERVICES
+              </h5>
+              <ul class="footer-links">
+                <li>
+                  <a href="#" data-en="Golden Visa" data-ar="الإقامة الذهبية"
+                    >Golden Visa</a
+                  >
+                </li>
+                <li>
+                  <a href="#" data-en="Business Setup" data-ar="تأسيس الشركات"
+                    >Business Setup</a
+                  >
+                </li>
+                <li>
+                  <a href="#" data-en="PRO Services" data-ar="خدمات PRO"
+                    >PRO Services</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
 
-        <p>
-          &copy; 2024 Rich Minds.
-          <span data-en="All rights reserved." data-ar="جميع الحقوق محفوظة."
-            >All rights reserved.</span
-          >
-        </p>
+        <!-- Copyright -->
+        <div class="footer-bottom">
+          <div class="row align-items-center">
+            <div class="col-md-6 col-12">
+              <p class="copyright-text">
+                &copy;
+                <span
+                  data-en="Copyright 2024, All Rights Reserved by Rich Minds"
+                  data-ar="حقوق الطبع والنشر 2024، جميع الحقوق محفوظة لشركة ريتش مايندز"
+                  >Copyright 2024, All Rights Reserved by Rich Minds</span
+                >
+              </p>
+            </div>
+            <div class="col-md-6 col-12">
+              <p class="designer-credit">
+                <span
+                  data-en="Designed by GWT Company"
+                  data-ar="مصمم من قبل شركة GWT"
+                  >Designed by GWT Company</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
 
@@ -544,335 +623,7 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
-
-    <!-- Premium Animation Enhancement Script -->
-    <script>
-      // Premium Animation Features
-
-      // Magnetic Effect for Interactive Elements
-      function initMagneticButtons() {
-        const magneticElements = document.querySelectorAll(
-          ".submit-btn, .whatsapp-cta, .call-cta, .contact-icon"
-        );
-
-        magneticElements.forEach((element) => {
-          element.addEventListener("mousemove", (e) => {
-            const rect = element.getBoundingClientRect();
-            const x = e.clientX - rect.left - rect.width / 2;
-            const y = e.clientY - rect.top - rect.height / 2;
-
-            element.style.transform = `translate(${x * 0.15}px, ${
-              y * 0.15
-            }px) scale(1.05)`;
-            element.style.transition = "transform 0.1s ease-out";
-          });
-
-          element.addEventListener("mouseleave", () => {
-            element.style.transform = "translate(0px, 0px) scale(1)";
-            element.style.transition = "transform 0.3s ease-out";
-          });
-        });
-      }
-
-      // Advanced Typing Effect
-      function createTypingEffect() {
-        const heroTitle = document.querySelector(".contact-hero h1");
-        if (heroTitle) {
-          const text = heroTitle.textContent;
-          heroTitle.textContent = "";
-
-          let i = 0;
-          const typeInterval = setInterval(() => {
-            heroTitle.textContent += text.charAt(i);
-            i++;
-
-            if (i >= text.length) {
-              clearInterval(typeInterval);
-              // Add cursor blink effect
-              heroTitle.style.borderRight = "3px solid var(--primary-gold)";
-              setTimeout(() => {
-                heroTitle.style.borderRight = "none";
-              }, 2000);
-            }
-          }, 100);
-        }
-      }
-
-      // 3D Card Hover Effects
-      function init3DCards() {
-        document.querySelectorAll(".contact-info-card").forEach((card) => {
-          card.addEventListener("mousemove", (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-
-            const rotateX = (y - centerY) / 8;
-            const rotateY = (centerX - x) / 8;
-
-            card.style.transform = `
-              perspective(1000px) 
-              rotateX(${rotateX}deg) 
-              rotateY(${rotateY}deg) 
-              translateY(-10px) 
-              scale(1.02)
-            `;
-            card.style.boxShadow = "0 25px 80px rgba(0, 0, 0, 0.2)";
-          });
-
-          card.addEventListener("mouseleave", () => {
-            card.style.transform =
-              "perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px) scale(1)";
-            card.style.boxShadow = "";
-          });
-        });
-      }
-
-      // Dynamic Floating Elements
-      function createFloatingElements() {
-        const hero = document.querySelector(".contact-hero");
-        const icons = [
-          "fas fa-star",
-          "fas fa-heart",
-          "fas fa-gem",
-          "fas fa-award",
-        ];
-
-        setInterval(() => {
-          if (Math.random() > 0.7) {
-            const element = document.createElement("div");
-            element.innerHTML = `<i class="${
-              icons[Math.floor(Math.random() * icons.length)]
-            }"></i>`;
-            element.style.cssText = `
-              position: absolute;
-              top: 100%;
-              left: ${Math.random() * 100}%;
-              color: rgba(221, 189, 127, 0.4);
-              font-size: ${Math.random() * 1 + 0.5}rem;
-              animation: floatUp 8s linear forwards;
-              pointer-events: none;
-              z-index: 1;
-            `;
-
-            hero.appendChild(element);
-
-            setTimeout(() => {
-              element.remove();
-            }, 8000);
-          }
-        }, 2000);
-      }
-
-      // Enhanced Form Interactions
-      function enhanceFormAnimations() {
-        const form = document.getElementById("contactForm");
-        const inputs = form.querySelectorAll(".form-control");
-
-        inputs.forEach((input) => {
-          // Focus wave effect
-          input.addEventListener("focus", function () {
-            const wave = document.createElement("div");
-            wave.style.cssText = `
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              background: linear-gradient(45deg, transparent, rgba(221, 189, 127, 0.1), transparent);
-              border-radius: 15px;
-              animation: waveEffect 1s ease-out;
-              pointer-events: none;
-              z-index: -1;
-            `;
-
-            this.parentElement.appendChild(wave);
-
-            setTimeout(() => {
-              wave.remove();
-            }, 1000);
-          });
-
-          // Success pulse effect
-          input.addEventListener("input", function () {
-            if (this.checkValidity() && this.value.length > 0) {
-              this.style.animation = "successPulse 0.5s ease-out";
-              setTimeout(() => {
-                this.style.animation = "";
-              }, 500);
-            }
-          });
-        });
-      }
-
-      // Scroll-triggered Animations
-      function initScrollAnimations() {
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("animate-visible");
-              }
-            });
-          },
-          {
-            threshold: 0.1,
-            rootMargin: "0px 0px -50px 0px",
-          }
-        );
-
-        // Observe all animatable elements
-        document
-          .querySelectorAll(
-            ".contact-info-card, .form-group, .contact-info-text"
-          )
-          .forEach((el) => {
-            el.classList.add("animate-hidden");
-            observer.observe(el);
-          });
-      }
-
-      // Background Animation
-      function initBackgroundAnimation() {
-        const hero = document.querySelector(".contact-hero");
-
-        // Create animated background overlay
-        const overlay = document.createElement("div");
-        overlay.style.cssText = `
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(45deg, 
-            rgba(221, 189, 127, 0.1) 0%,
-            transparent 25%,
-            rgba(55, 105, 131, 0.1) 50%,
-            transparent 75%,
-            rgba(221, 189, 127, 0.1) 100%
-          );
-          background-size: 400% 400%;
-          animation: gradientShift 15s ease-in-out infinite;
-          pointer-events: none;
-          z-index: 2;
-        `;
-
-        hero.appendChild(overlay);
-      }
-
-      // Add all animation CSS
-      const animationCSS = document.createElement("style");
-      animationCSS.textContent = `
-        @keyframes floatUp {
-          0% {
-            transform: translateY(0) rotate(0deg);
-            opacity: 0;
-          }
-          10% {
-            opacity: 0.8;
-          }
-          90% {
-            opacity: 0.8;
-          }
-          100% {
-            transform: translateY(-100vh) rotate(360deg);
-            opacity: 0;
-          }
-        }
-        
-        @keyframes waveEffect {
-          0% {
-            transform: translateX(-100%);
-            opacity: 0;
-          }
-          50% {
-            opacity: 1;
-          }
-          100% {
-            transform: translateX(100%);
-            opacity: 0;
-          }
-        }
-        
-        @keyframes successPulse {
-          0% {
-            transform: scale(1);
-            box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.4);
-          }
-          50% {
-            transform: scale(1.02);
-            box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
-          }
-          100% {
-            transform: scale(1);
-            box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
-          }
-        }
-        
-        @keyframes gradientShift {
-          0% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-          100% {
-            background-position: 0% 50%;
-          }
-        }
-        
-        .animate-hidden {
-          opacity: 0;
-          transform: translateY(50px);
-          transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .animate-visible {
-          opacity: 1;
-          transform: translateY(0);
-        }
-        
-        .contact-hero {
-          background-image: linear-gradient(135deg, rgba(6, 6, 6, 0.8) 0%, rgba(55, 105, 131, 0.7) 100%), 
-                           url('img/pexels-kindelmedia-7979605[1].jpg');
-          background-size: cover;
-          background-position: center;
-          background-attachment: fixed;
-        }
-        
-        @media (max-width: 768px) {
-          .contact-hero {
-            background-attachment: scroll;
-          }
-        }
-      `;
-      document.head.appendChild(animationCSS);
-
-      // Initialize all premium features
-      document.addEventListener("DOMContentLoaded", function () {
-        // Add delay to ensure all elements are loaded
-        setTimeout(() => {
-          initMagneticButtons();
-          init3DCards();
-          enhanceFormAnimations();
-          initScrollAnimations();
-          initBackgroundAnimation();
-
-          // Start dynamic elements
-          setTimeout(() => {
-            createFloatingElements();
-            createTypingEffect();
-          }, 1000);
-        }, 500);
-      });
-
-      console.log("🎨✨ Premium Contact Page Animations Loaded!");
-      console.log(
-        "🚀 Features: 3D Effects, Magnetic Interactions, Dynamic Background, Scroll Animations"
-      );
-    </script>
+    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
   </body>
 </html>
