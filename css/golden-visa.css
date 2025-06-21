@@ -161,13 +161,14 @@
   box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
   animation: badgePulse 3s ease-in-out infinite;
 }
-.golden-hero-content .hero-badge i{
+.golden-hero-content .hero-badge i {
   color: var(--primary-dark) !important;
 }
 
 .golden-hero-content h1 {
   font-family: "Playfair Display", serif;
   font-size: 3.5rem;
+  margin-top: 10px;
   color: var(--text-light);
   margin-bottom: 1.5rem;
   animation: heroTitleSlide 1.2s ease-out;

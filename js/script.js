@@ -168,12 +168,23 @@ window.addEventListener("scroll", function () {
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+    const href = this.getAttribute("href");
+
+    // Skip if href is just "#" or empty
+    if (!href || href === "#" || href.length <= 1) {
+      return;
+    }
+
+    try {
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    } catch (error) {
+      console.warn("Invalid selector:", href);
     }
   });
 });
@@ -368,5 +379,33 @@ window.addEventListener("scroll", function () {
     parallax.style.transform = `translateY(${speed}px)`;
   }
 });
+
+// ======================
+// Scroll progress indicator
+// ======================
+
+function createScrollProgress() {
+  const progressBar = document.createElement("div");
+  progressBar.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-gold), var(--primary-blue));
+            z-index: 9999;
+            transition: width 0.3s ease;
+        `;
+  document.body.appendChild(progressBar);
+
+  window.addEventListener("scroll", function () {
+    const scrollTop = window.pageYOffset;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    progressBar.style.width = scrollPercent + "%";
+  });
+}
+
+createScrollProgress();
 
 console.log("🚀 Rich Minds Website Loaded Successfully!");
