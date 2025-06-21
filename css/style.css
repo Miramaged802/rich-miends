@@ -1,11 +1,11 @@
 :root {
-  --primary-dark: #060606;
-  --primary-gold: #ddbd7f;
-  --primary-blue: #376983;
+  --primary-dark: #1a1a2e;
+  --primary-gold: #ffd700;
+  --primary-blue: #4169e1;
   --text-light: #ffffff;
   --text-dark: #333333;
-  --gradient-gold: linear-gradient(135deg, #ddbd7f, #f4d03f);
-  --gradient-blue: linear-gradient(135deg, #376983, #5dade2);
+  --gradient-gold: linear-gradient(135deg, #ffd700, #ffed4e);
+  --gradient-blue: linear-gradient(135deg, #4169e1, #1e90ff);
 }
 
 * {
@@ -22,7 +22,7 @@ body {
 
 /* Enhanced Navbar Styles */
 .navbar-custom {
-  background: rgba(6, 6, 6, 0.95);
+  background: var(--primary-dark);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(221, 189, 127, 0.1);
@@ -31,7 +31,7 @@ body {
 }
 
 .navbar-custom.scrolled {
-  background: rgba(6, 6, 6, 0.98);
+  background: var(--primary-dark);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 

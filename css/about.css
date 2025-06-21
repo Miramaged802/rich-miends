@@ -5,7 +5,7 @@
 /* About Hero Section */
 .about-hero {
   position: relative;
-  height: 50vh;
+  height: 80vh;
   display: flex;
   align-items: center;
   overflow: hidden;
