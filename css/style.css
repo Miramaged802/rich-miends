@@ -1550,6 +1550,10 @@ body {
   text-align: right;
 }
 
+[dir="rtl"] .footer-subtitle::after {
+  left: auto;
+  right: 0;
+}
 /* Performance Optimizations */
 .hero-section,
 .hero-slider,
