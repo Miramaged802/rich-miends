@@ -2,6 +2,7 @@
   --primary-dark: #1a1a2e;
   --primary-gold: #ffd700;
   --primary-blue: #4169e1;
+  --text-primary-yellow: #ffd700;
   --text-light: #ffffff;
   --text-dark: var(--primary-dark);
   --gradient-gold: linear-gradient(135deg, #ffd700, #ffed4e);
