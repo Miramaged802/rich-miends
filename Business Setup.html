@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Business Setup</title>
     <!-- Bootstrap CSS -->
     <link
@@ -13,19 +13,24 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/Business Setup.css">
-</head>
-<body>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/Business Setup.css" />
+  </head>
+  <body>
     <!-- Loading Overlay -->
     <div class="loading-overlay" id="loadingOverlay">
-        <div class="loading-spinner"></div>
+      <div class="loading-spinner"></div>
     </div>
 
     <!-- Navigation -->
@@ -48,7 +53,7 @@
           <ul class="navbar-nav mx-auto">
             <li class="nav-item">
               <a
-                class="nav-link "
+                class="nav-link"
                 href="index.html"
                 data-en="Home"
                 data-ar="الرئيسية"
@@ -88,7 +93,7 @@
                 <li>
                   <a
                     class="dropdown-item"
-                    href="#"
+                    href="Business Setup.html"
                     data-en="Business Setup"
                     data-ar="تأسيس الشركات"
                     >Business Setup</a
@@ -97,7 +102,7 @@
                 <li>
                   <a
                     class="dropdown-item"
-                    href="#"
+                    href="PRO Services.html"
                     data-en="PRO Services"
                     data-ar="خدمات PRO"
                     >PRO Services</a
@@ -123,8 +128,978 @@
       </div>
     </nav>
 
+    <!-- Business Hero Section -->
+    <section class="business-hero">
+      <div class="container">
+        <div class="business-hero-content">
+          <div class="hero-badge">
+            <i class="fas fa-briefcase me-2"></i>
+            <span
+              class="text-primary-dark"
+              data-en="Professional Business Services"
+              data-ar="خدمات الأعمال المهنية"
+              >Professional Business Services</span
+            >
+          </div>
 
-     <!-- Footer -->
+          <h1
+            data-en="Business Setup & Consultancy"
+            data-ar="تأسيس الشركات والاستشارات"
+          >
+            Business Setup & Consultancy
+          </h1>
+
+          <p
+            data-en="Your complete solution for establishing and growing your business in the UAE. From company formation to ongoing support."
+            data-ar="حلولك الشاملة لتأسيس وتنمية أعمالك في الإمارات. من تكوين الشركة إلى الدعم المستمر."
+          >
+            Your complete solution for establishing and growing your business in
+            the UAE. From company formation to ongoing support.
+          </p>
+
+          <!-- Quick Stats -->
+          <div class="hero-quick-stats">
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span
+                class="stat-label"
+                data-en="Success Rate"
+                data-ar="معدل النجاح"
+                >Success Rate</span
+              >
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">500+</span>
+              <span
+                class="stat-label"
+                data-en="Companies Formed"
+                data-ar="شركة تم تأسيسها"
+                >Companies Formed</span
+              >
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">24/7</span>
+              <span
+                class="stat-label"
+                data-en="Expert Support"
+                data-ar="دعم الخبراء"
+                >Expert Support</span
+              >
+            </div>
+          </div>
+
+          <!-- Quick Action Buttons -->
+          <div class="hero-actions">
+            <a href="#consultation" class="btn btn-primary btn-lg">
+              <i class="fas fa-phone-alt me-2"></i>
+              <span data-en="Free Consultation" data-ar="استشارة مجانية"
+                >Free Consultation</span
+              >
+            </a>
+            <a href="#business-types" class="btn btn-outline-light btn-lg">
+              <i class="fas fa-arrow-down me-2"></i>
+              <span data-en="Explore Options" data-ar="استكشف الخيارات"
+                >Explore Options</span
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section-light section-transition py-5">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center" data-aos="fade-up">
+            <h2
+              class="section-title"
+              data-en="Why Choose UAE for Business?"
+              data-ar="لماذا تختار الإمارات للأعمال؟"
+            >
+              Why Choose UAE for Business?
+            </h2>
+            <p
+              class="section-subtitle"
+              data-en="Discover the exceptional advantages of establishing your business in the UAE"
+              data-ar="اكتشف المزايا الاستثنائية لتأسيس أعمالك في الإمارات"
+            >
+              Discover the exceptional advantages of establishing your business
+              in the UAE
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="enhanced-card">
+              <div class="enhanced-icon">
+                <i class="fas fa-percentage"></i>
+              </div>
+              <h4 data-en="No Personal Income Tax" data-ar="لا ضريبة دخل شخصي">
+                No Personal Income Tax
+              </h4>
+              <p
+                data-en="Enjoy 0% personal income tax and competitive corporate tax rates"
+                data-ar="استمتع بـ 0% ضريبة دخل شخصي ومعدلات ضريبية تنافسية للشركات"
+              >
+                Enjoy 0% personal income tax and competitive corporate tax rates
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="enhanced-card">
+              <div class="enhanced-icon">
+                <i class="fas fa-globe"></i>
+              </div>
+              <h4 data-en="Strategic Location" data-ar="موقع استراتيجي">
+                Strategic Location
+              </h4>
+              <p
+                data-en="Gateway to Middle East, Asia, and Africa markets with world-class infrastructure"
+                data-ar="بوابة إلى أسواق الشرق الأوسط وآسيا وأفريقيا مع بنية تحتية عالمية"
+              >
+                Gateway to Middle East, Asia, and Africa markets with
+                world-class infrastructure
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-4 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="enhanced-card">
+              <div class="enhanced-icon">
+                <i class="fas fa-user-check"></i>
+              </div>
+              <h4 data-en="100% Foreign Ownership" data-ar="ملكية أجنبية 100%">
+                100% Foreign Ownership
+              </h4>
+              <p
+                data-en="Full foreign ownership allowed in most sectors with simplified procedures"
+                data-ar="ملكية أجنبية كاملة مسموحة في معظم القطاعات مع إجراءات مبسطة"
+              >
+                Full foreign ownership allowed in most sectors with simplified
+                procedures
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Business Types Section -->
+    <section class="section-dark section-transition py-5" id="business-types">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center" data-aos="fade-up">
+            <h2
+              class="section-title text-white"
+              data-en="Business Entity Types"
+              data-ar="أنواع الكيانات التجارية"
+            >
+              Business Entity Types
+            </h2>
+            <p
+              class="section-subtitle text-white"
+              data-en="Choose the perfect business structure for your venture"
+              data-ar="اختر الهيكل التجاري المثالي لمشروعك"
+            >
+              Choose the perfect business structure for your venture
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div
+            class="col-lg-6 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="enhanced-card-dark">
+              <div class="enhanced-icon">
+                <i class="fas fa-building"></i>
+              </div>
+              <h4
+                data-en="Limited Liability Company (LLC)"
+                data-ar="شركة ذات مسؤولية محدودة"
+              >
+                Limited Liability Company (LLC)
+              </h4>
+              <p
+                data-en="Most popular for onshore operations. 100% foreign ownership now allowed in most sectors."
+                data-ar="الأكثر شيوعاً للعمليات داخل الإمارات. ملكية أجنبية 100% مسموحة الآن في معظم القطاعات."
+              >
+                Most popular for onshore operations. 100% foreign ownership now
+                allowed in most sectors.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-6 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="enhanced-card-dark">
+              <div class="enhanced-icon">
+                <i class="fas fa-plane"></i>
+              </div>
+              <h4 data-en="Free Zone Company" data-ar="شركة المنطقة الحرة">
+                Free Zone Company
+              </h4>
+              <p
+                data-en="Ideal for international services, trading, and consulting. Full foreign ownership with tax benefits."
+                data-ar="مثالية للخدمات الدولية والتجارة والاستشارات. ملكية أجنبية كاملة مع مزايا ضريبية."
+              >
+                Ideal for international services, trading, and consulting. Full
+                foreign ownership with tax benefits.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-6 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="enhanced-card-dark">
+              <div class="enhanced-icon">
+                <i class="fas fa-ship"></i>
+              </div>
+              <h4 data-en="Offshore Company" data-ar="شركة الأوفشور">
+                Offshore Company
+              </h4>
+              <p
+                data-en="Suitable for asset holding and external operations. Ideal for international business management."
+                data-ar="مناسبة لحيازة الأصول والعمليات الخارجية. مثالية لإدارة الأعمال الدولية."
+              >
+                Suitable for asset holding and external operations. Ideal for
+                international business management.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-6 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="enhanced-card-dark">
+              <div class="enhanced-icon">
+                <i class="fas fa-code-branch"></i>
+              </div>
+              <h4
+                data-en="Branch of Foreign Company"
+                data-ar="فرع لشركة أجنبية"
+              >
+                Branch of Foreign Company
+              </h4>
+              <p
+                data-en="Enables international companies to operate in the UAE while maintaining parent company structure."
+                data-ar="يمكّن الشركات الدولية من العمل في الإمارات مع الحفاظ على هيكل الشركة الأم."
+              >
+                Enables international companies to operate in the UAE while
+                maintaining parent company structure.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Company Formation Process Section -->
+    <section class="section-light section-transition py-5">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center" data-aos="fade-up">
+            <h2
+              class="section-title"
+              data-en="Company Formation Process"
+              data-ar="عملية تأسيس الشركة"
+            >
+              Company Formation Process
+            </h2>
+            <p
+              class="section-subtitle"
+              data-en="Our comprehensive 8-step process to establish your business"
+              data-ar="عمليتنا الشاملة من 8 خطوات لتأسيس أعمالك"
+            >
+              Our comprehensive 8-step process to establish your business
+            </p>
+          </div>
+        </div>
+
+        <!-- Process Timeline -->
+        <div class="process-timeline-modern">
+          <!-- First Row -->
+          <div class="row g-4 mb-4">
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="process-step-modern">
+                <div class="step-number-modern">
+                  <span class="step-digit">1</span>
+                </div>
+                <div class="step-content">
+                  <div class="step-icon">
+                    <i class="fas fa-comments"></i>
+                  </div>
+                  <h5
+                    data-en="Initial Consultation"
+                    data-ar="الاستشارة الأولية"
+                  >
+                    Initial Consultation
+                  </h5>
+                  <p
+                    data-en="Assess your business needs and choose the right structure"
+                    data-ar="تقييم احتياجات عملك واختيار الهيكل المناسب"
+                  >
+                    Assess your business needs and choose the right structure
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="process-step-modern">
+                <div class="step-number-modern">
+                  <span class="step-digit">2</span>
+                </div>
+                <div class="step-content">
+                  <div class="step-icon">
+                    <i class="fas fa-signature"></i>
+                  </div>
+                  <h5 data-en="Name Reservation" data-ar="حجز الاسم التجاري">
+                    Name Reservation
+                  </h5>
+                  <p
+                    data-en="Reserve your company name with relevant authorities"
+                    data-ar="احجز اسم شركتك لدى السلطات المختصة"
+                  >
+                    Reserve your company name with relevant authorities
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="process-step-modern">
+                <div class="step-number-modern">
+                  <span class="step-digit">3</span>
+                </div>
+                <div class="step-content">
+                  <div class="step-icon">
+                    <i class="fas fa-file-alt"></i>
+                  </div>
+                  <h5 data-en="Document Preparation" data-ar="تحضير الوثائق">
+                    Document Preparation
+                  </h5>
+                  <p
+                    data-en="Prepare all legal documents and contracts"
+                    data-ar="تحضير جميع الوثائق والعقود القانونية"
+                  >
+                    Prepare all legal documents and contracts
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-3 col-md-6"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="process-step-modern">
+                <div class="step-number-modern">
+                  <span class="step-digit">4</span>
+                </div>
+                <div class="step-content">
+                  <div class="step-icon">
+                    <i class="fas fa-upload"></i>
+                  </div>
+                  <h5 data-en="Government Submission" data-ar="التقديم الحكومي">
+                    Government Submission
+                  </h5>
+                  <p
+                    data-en="Submit applications to relevant government bodies"
+                    data-ar="تقديم الطلبات للجهات الحكومية المختصة"
+                  >
+                    Submit applications to relevant government bodies
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Row -->
+          <div class="row g-4">
+            <div
+              class="col-lg-3 col-md-6 order-lg-4"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
+              <div class="process-step-modern">
+                <div class="step-number-modern">
+                  <span class="step-digit">5</span>
+                </div>
+                <div class="step-content">
+                  <div class="step-icon">
+                    <i class="fas fa-certificate"></i>
+                  </div>
+                  <h5 data-en="License Issuance" data-ar="إصدار الرخصة">
+                    License Issuance
+                  </h5>
+                  <p
+                    data-en="Obtain your trade license and establishment card"
+                    data-ar="احصل على رخصتك التجارية وبطاقة المؤسسة"
+                  >
+                    Obtain your trade license and establishment card
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-3 col-md-6 order-lg-3"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
+              <div class="process-step-modern">
+                <div class="step-number-modern">
+                  <span class="step-digit">6</span>
+                </div>
+                <div class="step-content">
+                  <div class="step-icon">
+                    <i class="fas fa-university"></i>
+                  </div>
+                  <h5
+                    data-en="Bank Account Opening"
+                    data-ar="فتح الحساب البنكي"
+                  >
+                    Bank Account Opening
+                  </h5>
+                  <p
+                    data-en="Open corporate bank accounts with local banks"
+                    data-ar="افتح حسابات بنكية تجارية مع البنوك المحلية"
+                  >
+                    Open corporate bank accounts with local banks
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-3 col-md-6 order-lg-2"
+              data-aos="fade-up"
+              data-aos-delay="700"
+            >
+              <div class="process-step-modern">
+                <div class="step-number-modern">
+                  <span class="step-digit">7</span>
+                </div>
+                <div class="step-content">
+                  <div class="step-icon">
+                    <i class="fas fa-id-card"></i>
+                  </div>
+                  <h5 data-en="Visa Processing" data-ar="معالجة التأشيرات">
+                    Visa Processing
+                  </h5>
+                  <p
+                    data-en="Secure residency visas for investors and employees"
+                    data-ar="احصل على تأشيرات الإقامة للمستثمرين والموظفين"
+                  >
+                    Secure residency visas for investors and employees
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-3 col-md-6 order-lg-1"
+              data-aos="fade-up"
+              data-aos-delay="800"
+            >
+              <div class="process-step-modern">
+                <div class="step-number-modern">
+                  <span class="step-digit">8</span>
+                </div>
+                <div class="step-content">
+                  <div class="step-icon">
+                    <i class="fas fa-handshake"></i>
+                  </div>
+                  <h5 data-en="Ongoing Support" data-ar="الدعم المستمر">
+                    Ongoing Support
+                  </h5>
+                  <p
+                    data-en="Continuous business support and compliance assistance"
+                    data-ar="دعم مستمر للأعمال ومساعدة الامتثال"
+                  >
+                    Continuous business support and compliance assistance
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- License Types Section -->
+    <section class="section-dark section-transition py-5">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center" data-aos="fade-up">
+            <h2
+              class="section-title text-white"
+              data-en="Business License Types"
+              data-ar="أنواع التراخيص التجارية"
+            >
+              Business License Types
+            </h2>
+            <p
+              class="section-subtitle text-white"
+              data-en="Different licenses for different business activities"
+              data-ar="تراخيص مختلفة للأنشطة التجارية المختلفة"
+            >
+              Different licenses for different business activities
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="enhanced-card-dark">
+              <div class="enhanced-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+              <h5 data-en="Commercial License" data-ar="رخصة تجارية">
+                Commercial License
+              </h5>
+              <p
+                data-en="For trading, wholesale, and retail businesses"
+                data-ar="للتجارة والبيع بالجملة والتجزئة"
+              >
+                For trading, wholesale, and retail businesses
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="enhanced-card-dark">
+              <div class="enhanced-icon">
+                <i class="fas fa-industry"></i>
+              </div>
+              <h5 data-en="Industrial License" data-ar="رخصة صناعية">
+                Industrial License
+              </h5>
+              <p
+                data-en="For manufacturing and production activities"
+                data-ar="للتصنيع وأنشطة الإنتاج"
+              >
+                For manufacturing and production activities
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="enhanced-card-dark">
+              <div class="enhanced-icon">
+                <i class="fas fa-user-tie"></i>
+              </div>
+              <h5 data-en="Professional License" data-ar="رخصة مهنية">
+                Professional License
+              </h5>
+              <p
+                data-en="For consultancy, services, and professional activities"
+                data-ar="للاستشارات والخدمات والأنشطة المهنية"
+              >
+                For consultancy, services, and professional activities
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-3 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="enhanced-card-dark">
+              <div class="enhanced-icon">
+                <i class="fas fa-map-marked-alt"></i>
+              </div>
+              <h5 data-en="Tourism License" data-ar="رخصة سياحية">
+                Tourism License
+              </h5>
+              <p
+                data-en="For tourism, hospitality, and travel services"
+                data-ar="للسياحة والضيافة وخدمات السفر"
+              >
+                For tourism, hospitality, and travel services
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Government Authorities Section -->
+    <section class="section-light section-transition py-5">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center" data-aos="fade-up">
+            <h2
+              class="section-title"
+              data-en="Government Authorities"
+              data-ar="الجهات الحكومية"
+            >
+              Government Authorities
+            </h2>
+            <p
+              class="section-subtitle"
+              data-en="Key government bodies involved in business setup"
+              data-ar="الجهات الحكومية الرئيسية المشاركة في تأسيس الأعمال"
+            >
+              Key government bodies involved in business setup
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div
+            class="col-lg-6 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="authority-enhanced-card">
+              <div class="authority-badge" data-en="Primary" data-ar="رئيسي">
+                Primary
+              </div>
+              <div class="enhanced-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h5
+                data-en="Department of Economic Development (DED)"
+                data-ar="دائرة التنمية الاقتصادية"
+              >
+                Department of Economic Development (DED)
+              </h5>
+              <p
+                data-en="Main authority for onshore company formation and licensing"
+                data-ar="السلطة الرئيسية لتكوين الشركات والترخيص"
+              >
+                Main authority for onshore company formation and licensing
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-6 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="authority-enhanced-card">
+              <div class="authority-badge" data-en="Zones" data-ar="مناطق">
+                Zones
+              </div>
+              <div class="enhanced-icon">
+                <i class="fas fa-building"></i>
+              </div>
+              <h5 data-en="Free Zone Authorities" data-ar="سلطات المناطق الحرة">
+                Free Zone Authorities
+              </h5>
+              <p
+                data-en="DMCC, JAFZA, Dubai South, DIFC and other specialized zones"
+                data-ar="دبي للسلع المتعددة، جافزا، دبي الجنوب، ديفك والمناطق المتخصصة الأخرى"
+              >
+                DMCC, JAFZA, Dubai South, DIFC and other specialized zones
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-6 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="authority-enhanced-card">
+              <div class="authority-badge" data-en="Federal" data-ar="اتحادي">
+                Federal
+              </div>
+              <div class="enhanced-icon">
+                <i class="fas fa-balance-scale"></i>
+              </div>
+              <h5 data-en="Ministry of Economy" data-ar="وزارة الاقتصاد">
+                Ministry of Economy
+              </h5>
+              <p
+                data-en="Federal authority for business regulation and policy"
+                data-ar="السلطة الاتحادية لتنظيم الأعمال والسياسة"
+              >
+                Federal authority for business regulation and policy
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="col-lg-6 col-md-6"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="authority-enhanced-card">
+              <div class="authority-badge" data-en="Immigration" data-ar="هجرة">
+                Immigration
+              </div>
+              <div class="enhanced-icon">
+                <i class="fas fa-id-card"></i>
+              </div>
+              <h5
+                data-en="Federal Authority for Identity & Citizenship"
+                data-ar="الهيئة الاتحادية للهوية والجنسية"
+              >
+                Federal Authority for Identity & Citizenship
+              </h5>
+              <p
+                data-en="Handles visa and residency permit processing"
+                data-ar="تتعامل مع معالجة التأشيرات وتصاريح الإقامة"
+              >
+                Handles visa and residency permit processing
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rich Minds Services Section -->
+    <section class="section-dark section-transition py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="content-section">
+              <h2
+                class="section-title text-white"
+                data-en="How Rich Minds Helps You"
+                data-ar="كيف تساعدك Rich Minds"
+              >
+                How Rich Minds Helps You
+              </h2>
+              <p
+                class="text-white mb-4"
+                data-en="Comprehensive business setup and consultancy services to your needs"
+                data-ar="خدمات شاملة لتأسيس الأعمال والاستشارات مصممة لاحتياجاتك"
+              >
+                Comprehensive business setup and consultancy services to your
+                needs
+              </p>
+
+              <div class="features-grid">
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <i class="fas fa-check-circle"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h6
+                      class="text-white"
+                      data-en="End-to-End Support"
+                      data-ar="دعم شامل"
+                    >
+                      End-to-End Support
+                    </h6>
+                    <p
+                      class="text-white opacity-75"
+                      data-en="Complete business setup from consultation to post-incorporation"
+                      data-ar="تأسيس أعمال كامل من الاستشارة إلى ما بعد التأسيس"
+                    >
+                      Complete business setup from consultation to
+                      post-incorporation
+                    </p>
+                  </div>
+                </div>
+
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h6
+                      class="text-white"
+                      data-en="Expert Team"
+                      data-ar="فريق الخبراء"
+                    >
+                      Expert Team
+                    </h6>
+                    <p
+                      class="text-white opacity-75"
+                      data-en="Experienced professionals with deep UAE market knowledge"
+                      data-ar="محترفون ذوو خبرة بمعرفة عميقة لسوق الإمارات"
+                    >
+                      Experienced professionals with deep UAE market knowledge
+                    </p>
+                  </div>
+                </div>
+
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <i class="fas fa-clock"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h6
+                      class="text-white"
+                      data-en="Fast Processing"
+                      data-ar="معالجة سريعة"
+                    >
+                      Fast Processing
+                    </h6>
+                    <p
+                      class="text-white opacity-75"
+                      data-en="Quick turnaround times with efficient government liaison"
+                      data-ar="أوقات تسليم سريعة مع تنسيق حكومي فعال"
+                    >
+                      Quick turnaround times with efficient government liaison
+                    </p>
+                  </div>
+                </div>
+
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <i class="fas fa-handshake"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h6
+                      class="text-white"
+                      data-en="Ongoing Partnership"
+                      data-ar="شراكة مستمرة"
+                    >
+                      Ongoing Partnership
+                    </h6>
+                    <p
+                      class="text-white opacity-75"
+                      data-en="Continuous support for business growth and compliance"
+                      data-ar="دعم مستمر لنمو الأعمال والامتثال"
+                    >
+                      Continuous support for business growth and compliance
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="image-container">
+              <img
+                src="img/pexels-ayrat-244411276-16534273[1].jpg"
+                alt="Business Consultancy"
+                class="img-fluid rounded"
+              />
+              <div class="image-overlay">
+                <div class="overlay-content text-white">
+                  <i class="fas fa-briefcase fa-3x text-white mb-3"></i>
+                  <h4
+                    data-en="Your Business Success Partner"
+                    data-ar="شريك نجاح أعمالك"
+                  >
+                    Your Business Success Partner
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Consultation CTA Section -->
+    <section class="section-light section-transition py-5" id="consultation">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="consultation-content">
+              <h2
+                class="mb-4"
+                data-en="Ready to Start Your Business Journey?"
+                data-ar="مستعد لبدء رحلة أعمالك؟"
+              >
+                Ready to Start Your Business Journey?
+              </h2>
+              <p
+                class="mb-4"
+                data-en="Get expert consultation and personalized guidance for your UAE business setup. Our team of specialists will help you navigate through the entire process smoothly and efficiently."
+                data-ar="احصل على استشارة خبراء وإرشاد شخصي لتأسيس أعمالك في الإمارات. فريقنا من المختصين سيساعدك في التنقل عبر العملية بأكملها بسلاسة وكفاءة."
+              >
+                Get expert consultation and personalized guidance for your UAE
+                business setup. Our team of specialists will help you navigate
+                through the entire process smoothly and efficiently.
+              </p>
+              <div class="consultation-buttons">
+                <a
+                  href="https://wa.me/971501234567"
+                  class="btn btn-primary btn-lg me-3 mb-3"
+                >
+                  <i class="fab fa-whatsapp me-2"></i>
+                  <span data-en="WhatsApp Consultation" data-ar="استشارة واتساب"
+                    >WhatsApp Consultation</span
+                  >
+                </a>
+                <a
+                  href="contact.html"
+                  class="btn btn-outline-primary btn-lg mb-3"
+                >
+                  <i class="fas fa-envelope me-2"></i>
+                  <span data-en="Contact Us" data-ar="تواصل معنا"
+                    >Contact Us</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="consultation-image-container">
+              <img
+                src="img/pexels-kampus-8441811[1].jpg"
+                alt="Business Consultation"
+                class="img-fluid rounded"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
       <div class="container">
         <div class="row g-4">
@@ -266,9 +1241,9 @@
       <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Bootstrap JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
-  
-</body>
+    <script src="js/Business Setup.js"></script>
+  </body>
 </html>

@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }, 1000);
 
-  // Language switching functionality
+  // Universal Language System - Works across all pages
   let currentLanguage = localStorage.getItem("preferredLanguage") || "en";
 
   function updateLanguage() {
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
       langButton.textContent = currentLanguage === "en" ? "عربي" : "English";
     }
 
-    // Update direction
+    // Update direction and language attributes
     const html = document.documentElement;
     const body = document.body;
 
@@ -47,20 +47,44 @@ document.addEventListener("DOMContentLoaded", function () {
       html.setAttribute("dir", "rtl");
       html.setAttribute("lang", "ar");
       body.classList.add("rtl");
+      body.style.direction = "rtl";
+      body.style.textAlign = "right";
     } else {
       html.setAttribute("dir", "ltr");
       html.setAttribute("lang", "en");
       body.classList.remove("rtl");
+      body.style.direction = "ltr";
+      body.style.textAlign = "left";
     }
 
-    // Save language preference
+    // Save language preference for entire website
     localStorage.setItem("preferredLanguage", currentLanguage);
+
+    // Force FontAwesome icons to reload in RTL mode
+    if (currentLanguage === "ar") {
+      // Force re-render of FontAwesome icons
+      const icons = document.querySelectorAll('i[class*="fa"]');
+      icons.forEach((icon) => {
+        const classes = icon.className;
+        icon.className = "";
+        setTimeout(() => {
+          icon.className = classes;
+        }, 10);
+      });
+    }
   }
 
-  // Global toggle function
+  // Global toggle function - affects entire website
   window.toggleLanguage = function () {
     currentLanguage = currentLanguage === "en" ? "ar" : "en";
     updateLanguage();
+
+    // Broadcast language change to other pages/tabs
+    window.dispatchEvent(
+      new CustomEvent("languageChanged", {
+        detail: { language: currentLanguage },
+      })
+    );
 
     // Refresh AOS if available
     if (typeof AOS !== "undefined") {
@@ -70,6 +94,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initialize language on page load
   updateLanguage();
+
+  // Listen for language changes across browser tabs/windows
+  window.addEventListener("storage", function (e) {
+    if (e.key === "preferredLanguage" && e.newValue !== currentLanguage) {
+      currentLanguage = e.newValue;
+      updateLanguage();
+    }
+  });
+
+  // Listen for real-time language changes within same tab
+  window.addEventListener("languageChanged", function (e) {
+    if (e.detail.language !== currentLanguage) {
+      currentLanguage = e.detail.language;
+      updateLanguage();
+    }
+  });
 
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
