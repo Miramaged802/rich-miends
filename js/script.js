@@ -408,4 +408,99 @@ function createScrollProgress() {
 
 createScrollProgress();
 
+// ======================
+// Nested Dropdown Functionality
+// ======================
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("🔧 Initializing nested dropdown functionality...");
+
+  // Handle nested dropdown clicks
+  const dropdownToggles = document.querySelectorAll(
+    ".dropdown-submenu .dropdown-toggle"
+  );
+
+  console.log("📋 Found dropdown toggles:", dropdownToggles.length);
+
+  dropdownToggles.forEach(function (toggle, index) {
+    console.log(
+      `🎯 Setting up toggle ${index + 1}:`,
+      toggle.textContent.trim()
+    );
+
+    toggle.addEventListener("click", function (e) {
+      console.log("🖱️ Dropdown clicked:", this.textContent.trim());
+      e.preventDefault();
+      e.stopPropagation();
+
+      const submenu = this.nextElementSibling;
+      console.log("📁 Submenu found:", submenu ? "Yes" : "No");
+
+      // Close other submenus
+      document
+        .querySelectorAll(".dropdown-submenu .dropdown-menu")
+        .forEach(function (menu) {
+          if (menu !== submenu) {
+            menu.classList.remove("show");
+          }
+        });
+
+      // Toggle current submenu
+      if (submenu) {
+        submenu.classList.toggle("show");
+        console.log(
+          "✅ Submenu toggled, now showing:",
+          submenu.classList.contains("show")
+        );
+      }
+    });
+  });
+
+  // Handle desktop hover for nested dropdowns
+  const dropdownSubmenus = document.querySelectorAll(".dropdown-submenu");
+
+  dropdownSubmenus.forEach(function (submenu) {
+    submenu.addEventListener("mouseenter", function () {
+      if (window.innerWidth > 991) {
+        const menu = this.querySelector(".dropdown-menu");
+        if (menu) {
+          menu.classList.add("show");
+        }
+      }
+    });
+
+    submenu.addEventListener("mouseleave", function () {
+      if (window.innerWidth > 991) {
+        const menu = this.querySelector(".dropdown-menu");
+        if (menu) {
+          menu.classList.remove("show");
+        }
+      }
+    });
+  });
+
+  // Close submenus when main dropdown closes
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".dropdown")) {
+      document
+        .querySelectorAll(".dropdown-submenu .dropdown-menu")
+        .forEach(function (menu) {
+          menu.classList.remove("show");
+        });
+    }
+  });
+
+  // Handle Bootstrap dropdown events
+  const mainDropdowns = document.querySelectorAll(".navbar .dropdown");
+  mainDropdowns.forEach(function (dropdown) {
+    dropdown.addEventListener("hidden.bs.dropdown", function () {
+      // Close all submenus when main dropdown closes
+      this.querySelectorAll(".dropdown-submenu .dropdown-menu").forEach(
+        function (menu) {
+          menu.classList.remove("show");
+        }
+      );
+    });
+  });
+});
+
 console.log("🚀 Rich Minds Website Loaded Successfully!");
