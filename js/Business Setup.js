@@ -179,7 +179,7 @@ function updateLanguage() {
 window.toggleLanguage = function () {
   currentLanguage = currentLanguage === "en" ? "ar" : "en";
   updateLanguage();
-
+  
   // Broadcast language change to other pages/tabs
   window.dispatchEvent(
     new CustomEvent("languageChanged", {
