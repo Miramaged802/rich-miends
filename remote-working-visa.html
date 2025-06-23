@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote Working Visa</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Custom CSS --> 
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/remote-working-visa.css">
+</head>
+<body>
+        <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+      <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/logo 2.png" alt="Rich Minds" class="logo" />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="index.html"
+                data-en="Home"
+                data-ar="الرئيسية"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="about.html"
+                data-en="About"
+                data-ar="من نحن"
+                >About</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="servicesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                data-en="Services"
+                data-ar="خدماتنا"
+                >Services</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="golden-visa.html"
+                    data-en="Golden Visa"
+                    data-ar="الإقامة الذهبية"
+                    >Golden Visa</a
+                  >
+                </li>
+                <li class="dropdown-submenu">
+                  <a
+                    class="dropdown-item dropdown-toggle"
+                    href="#"
+                    data-en="Visas"
+                    data-ar="التأشيرات"
+                    >Visas</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="freelancer-visa.html"
+                        data-en="Freelancer Visa"
+                        data-ar="تأشيرة العمل الحر"
+                        >Freelancer Visa</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="remote-working-visa.html"
+                        data-en="Remote Working Visa"
+                        data-ar="تأشيرة العمل عن بُعد"
+                        >Remote Working Visa</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="retirement-visa.html"
+                        data-en="Retirement Visa"
+                        data-ar="تأشيرة التقاعد"
+                        >Retirement Visa</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="tourist-visa.html"
+                        data-en="Tourist Visa"
+                        data-ar="تأشيرة السياحة"
+                        >Tourist Visa</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="Business Setup.html"
+                    data-en="Business Setup"
+                    data-ar="تأسيس الشركات"
+                    >Business Setup</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="PRO Services.html"
+                    data-en="PRO Services"
+                    data-ar="خدمات PRO"
+                    >PRO Services</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="contact.html"
+                data-en="Contact Us"
+                data-ar="تواصل معنا"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+
+          <button class="language-toggle" onclick="toggleLanguage()">
+            <i class="fas fa-globe"></i> <span id="langText">عربي</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+
+
+    
+  <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-section">
+              <img src="img/logo 2.png" alt="Rich Minds" class="logo" />
+              <p
+                class="footer-text"
+                data-en="Your trusted partner for UAE business, residency, and success. We transform your aspirations into achievements."
+                data-ar="شريكك الموثوق للأعمال والإقامة والنجاح في الإمارات. نحول طموحاتك إلى إنجازات."
+              >
+                Your trusted partner for UAE business, residency, and success.
+                We transform your aspirations into achievements.
+              </p>
+              <div class="footer-social">
+                <a href="#" aria-label="Facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" aria-label="Instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" aria-label="LinkedIn"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a href="#" aria-label="Twitter"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <div class="footer-section">
+              <h4
+                class="footer-subtitle"
+                data-en="Quick Links"
+                data-ar="روابط سريعة"
+              >
+                Quick Links
+              </h4>
+              <ul class="footer-links">
+                <li>
+                  <a href="index.html" data-en="Home" data-ar="الرئيسية"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a href="about.html" data-en="About" data-ar="من نحن"
+                    >About</a
+                  >
+                </li>
+                <li>
+                  <a href="#" data-en="Services" data-ar="الخدمات">Services</a>
+                </li>
+                <li>
+                  <a href="contact.html" data-en="Contact" data-ar="اتصل بنا"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-section">
+              <h4 class="footer-subtitle" data-en="Services" data-ar="خدماتنا">
+                Services
+              </h4>
+              <ul class="footer-links">
+                <li>
+                  <a href="#" data-en="Golden Visa" data-ar="الإقامة الذهبية"
+                    >Golden Visa</a
+                  >
+                </li>
+                <li>
+                  <a href="#" data-en="Business Setup" data-ar="تأسيس الشركات"
+                    >Business Setup</a
+                  >
+                </li>
+                <li>
+                  <a href="#" data-en="PRO Services" data-ar="خدمات PRO"
+                    >PRO Services</a
+                  >
+                </li>
+                <li>
+                  <a href="#" data-en="Consultancy" data-ar="الاستشارات"
+                    >Consultancy</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-section">
+              <h4
+                class="footer-subtitle"
+                data-en="Contact Info"
+                data-ar="معلومات التواصل"
+              >
+                Contact Info
+              </h4>
+              <div class="contact-info">
+                <p>
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span data-en="Dubai, UAE" data-ar="دبي، الإمارات"
+                    >Dubai, UAE</span
+                  >
+                </p>
+                <p><i class="fas fa-phone"></i> +971 50 123 4567</p>
+                <p><i class="fas fa-envelope"></i> info@richminds.ae</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <p
+                class="copyright-text"
+                data-en="© 2024 Rich Minds. All rights reserved."
+                data-ar="© 2024 ريتش مايندز. جميع الحقوق محفوظة."
+              >
+                © 2024 Rich Minds. All rights reserved.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <p
+                class="designer-credit"
+                data-en="Designed with GWT for your success"
+                data-ar="مصمم بـ GWT من أجل نجاحك"
+              >
+                Designed with GWT for your success
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/971501234567" class="whatsapp-float" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
