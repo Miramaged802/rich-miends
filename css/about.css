@@ -566,6 +566,26 @@
   overflow: hidden;
 }
 
+.services-overview .row {
+  justify-content: center;
+}
+
+.services-overview .col-lg-4 {
+  max-width: 300px;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 1200px) {
+  .services-overview .row {
+    justify-content: space-between;
+  }
+
+  .services-overview .col-lg-4 {
+    flex: 0 0 23%;
+    max-width: 23%;
+  }
+}
+
 .services-overview::before {
   content: "";
   position: absolute;
@@ -751,9 +771,20 @@
 
 .service-features {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Special styling for visa service card with more tags */
+.service-card:nth-child(3) .service-features {
+  gap: 6px;
+}
+
+.service-card:nth-child(3) .feature-tag {
+  padding: 6px 12px;
+  font-size: 0.8rem;
 }
 
 .feature-tag {
@@ -1240,6 +1271,16 @@
     margin-bottom: 2rem;
   }
 
+  .services-overview .col-lg-4 {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .service-card:nth-child(3) .feature-tag {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+
   .cta-content {
     padding: 40px 25px;
   }
@@ -1340,8 +1381,6 @@
   right: auto;
 }
 
-
-
 [dir="rtl"] .story-content::before {
   left: auto;
   right: 0;
@@ -1360,7 +1399,7 @@
 }
 [dir="rtl"] .value-icon {
   display: flex;
- 
+
   animation: slideInRight 0.8s ease forwards !important;
 }
 @keyframes slideInRight {

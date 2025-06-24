@@ -192,8 +192,21 @@ function animateServiceCard(element) {
       setTimeout(() => {
         tag.style.transform = "scale(1)";
       }, 200);
-    }, 400 + index * 100);
+    }, 400 + index * 80); // Reduced delay for more tags
   });
+
+  // Special animation for visa service card (3rd card)
+  if (element.querySelector('h3[data-en="UAE Visas"]')) {
+    setTimeout(() => {
+      element.style.transform += " rotateY(5deg)";
+      setTimeout(() => {
+        element.style.transform = element.style.transform.replace(
+          " rotateY(5deg)",
+          ""
+        );
+      }, 300);
+    }, 600);
+  }
 }
 
 function animateValueItem(element) {
@@ -462,10 +475,10 @@ setupHoverEffects();
 // Re-initialize on resize
 window.addEventListener("resize", debounce(setupMobileOptimizations, 250));
 
-  // Scroll progress indicator
-  function createScrollProgress() {
-    const progressBar = document.createElement("div");
-    progressBar.style.cssText = `
+// Scroll progress indicator
+function createScrollProgress() {
+  const progressBar = document.createElement("div");
+  progressBar.style.cssText = `
             position: fixed;
             top: 0;
             left: 0;
@@ -475,14 +488,14 @@ window.addEventListener("resize", debounce(setupMobileOptimizations, 250));
             z-index: 9999;
             transition: width 0.3s ease;
         `;
-    document.body.appendChild(progressBar);
+  document.body.appendChild(progressBar);
 
-    window.addEventListener("scroll", function () {
-      const scrollTop = window.pageYOffset;
-      const docHeight = document.body.scrollHeight - window.innerHeight;
-      const scrollPercent = (scrollTop / docHeight) * 100;
-      progressBar.style.width = scrollPercent + "%";
-    });
-  }
+  window.addEventListener("scroll", function () {
+    const scrollTop = window.pageYOffset;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    progressBar.style.width = scrollPercent + "%";
+  });
+}
 
-  createScrollProgress();
+createScrollProgress();
