@@ -190,6 +190,87 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 });
 
 // ======================
+// Counter Animation
+// ======================
+function animateCounters() {
+  const counters = document.querySelectorAll(".stat-number");
+
+  counters.forEach((counter) => {
+    const target = parseInt(counter.getAttribute("data-target"));
+    const increment = target / 100;
+    let current = 0;
+
+    const updateCounter = () => {
+      if (current < target) {
+        current += increment;
+        counter.textContent = Math.ceil(current);
+        requestAnimationFrame(updateCounter);
+      } else {
+        counter.textContent = target;
+      }
+    };
+
+    updateCounter();
+  });
+}
+
+// Observer for company stats
+const statsObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animateCounters();
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
+
+// Observe company stats section
+const companyStats = document.querySelector(".company-stats");
+if (companyStats) {
+  statsObserver.observe(companyStats);
+}
+
+// ======================
+// Company Gallery Animation
+// ======================
+function initCompanyGallery() {
+  const companyCards = document.querySelectorAll(".company-image-card");
+
+  // Add stagger animation to company images
+  companyCards.forEach((card, index) => {
+    card.style.opacity = "0";
+    card.style.transform = "translateY(30px)";
+
+    setTimeout(() => {
+      card.style.transition = "all 0.6s ease";
+      card.style.opacity = "1";
+      card.style.transform = "translateY(0)";
+    }, index * 100);
+  });
+}
+
+// Initialize company gallery when section is visible
+const companyGallery = document.querySelector(".company-gallery-section");
+if (companyGallery) {
+  const galleryObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          initCompanyGallery();
+          galleryObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  galleryObserver.observe(companyGallery);
+}
+
+// ======================
 // Animations on Scroll
 // ======================
 const observerOptions = {

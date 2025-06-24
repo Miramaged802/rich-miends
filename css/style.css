@@ -605,6 +605,165 @@ body {
   }
 }
 
+/* Our Company Section */
+.our-company-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.company-gallery {
+  margin-bottom: 4rem;
+}
+
+.company-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 300px;
+}
+
+.company-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.company-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.company-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.company-card:hover .company-image img {
+  transform: scale(1.1);
+}
+
+.company-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(26, 26, 46, 0.8) 0%,
+    rgba(221, 189, 127, 0.8) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.company-card:hover .company-overlay {
+  opacity: 1;
+}
+
+.company-content {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.company-card:hover .company-content {
+  transform: translateY(0);
+}
+
+.company-content h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--primary-gold);
+}
+
+.company-content p {
+  font-size: 0.9rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Company Stats */
+.company-stats {
+  background: rgba(26, 26, 46, 0.05);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1rem;
+}
+
+.stat-icon {
+  font-size: 3rem;
+  color: var(--primary-gold);
+  margin-bottom: 1rem;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  font-family: "Playfair Display", serif;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Company Gallery Section */
+.company-gallery-section {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.company-images-grid {
+  margin-top: 2rem;
+}
+
+.company-image-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 150px;
+  background: #fff;
+}
+
+.company-image-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.company-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+}
+
+.company-image-card:hover img {
+  transform: scale(1.1);
+}
+
 /* Why Choose Us Section */
 .why-choose-section {
   padding: 100px 0;
@@ -1494,6 +1653,58 @@ body {
     right: 20px;
     font-size: 24px;
   }
+
+  /* Our Company Responsive */
+  .our-company-section {
+    padding: 60px 0;
+  }
+
+  .company-card {
+    height: 250px;
+    margin-bottom: 1rem;
+  }
+
+  .company-content h4 {
+    font-size: 1.1rem;
+  }
+
+  .company-content p {
+    font-size: 0.8rem;
+  }
+
+  .company-stats {
+    padding: 2rem 1rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .stat-icon {
+    font-size: 2.5rem;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+  }
+
+  /* Company Gallery Responsive */
+  .company-gallery-section {
+    padding: 40px 0;
+  }
+
+  .company-image-card {
+    height: 120px;
+  }
+
+  .company-images-grid .row {
+    margin: 0 -5px;
+  }
+
+  .company-images-grid .row > * {
+    padding: 0 5px;
+    margin-bottom: 10px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1504,6 +1715,15 @@ body {
 
   .container {
     padding: 0 15px;
+  }
+
+  /* Company Gallery Extra Small */
+  .company-gallery-section {
+    padding: 30px 0;
+  }
+
+  .company-image-card {
+    height: 100px;
   }
 
   .hero-title {
@@ -1742,6 +1962,14 @@ body {
 [dir="rtl"] .visa-service-card i {
   margin-left: 10px;
   margin-right: 0;
+}
+
+[dir="rtl"] .company-content {
+  text-align: center;
+}
+
+[dir="rtl"] .company-stats {
+  direction: rtl;
 }
 /* Performance Optimizations */
 .hero-section,
