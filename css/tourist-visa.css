@@ -370,6 +370,30 @@
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
+/* Benefits Cards Stack */
+.benefits-stack .enhanced-card {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.benefits-stack .enhanced-card:last-child {
+  margin-bottom: 0;
+}
+
+.benefits-stack .enhanced-card h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--primary-dark);
+}
+
+.benefits-stack .enhanced-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+  color: var(--text-muted);
+}
+
 .enhanced-card-dark {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -413,6 +437,28 @@
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
+}
+
+/* Types of Visas Grid - 3 Column Layout */
+.visa-types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .visa-types-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .visa-types-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
 .feature-item {
@@ -628,7 +674,8 @@
   content: "";
   position: absolute;
   bottom: -10px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 60px;
   height: 4px;
   background: var(--gradient-gold);
@@ -649,6 +696,59 @@
 
 .section-dark .section-subtitle {
   color: rgba(255, 255, 255, 0.8);
+}
+
+/* Section Spacing */
+.section-light,
+.section-dark {
+  padding: 80px 0;
+}
+
+.section-light .container,
+.section-dark .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Content Alignment */
+.content-section {
+  padding-right: 2rem;
+}
+
+@media (max-width: 991px) {
+  .content-section {
+    padding-right: 0;
+    margin-bottom: 3rem;
+  }
+}
+
+/* Enhanced Card Animations */
+.enhanced-card,
+.enhanced-card-dark {
+  position: relative;
+  overflow: hidden;
+}
+
+.enhanced-card::before,
+.enhanced-card-dark::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 215, 0, 0.1),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.enhanced-card:hover::before,
+.enhanced-card-dark:hover::before {
+  left: 100%;
 }
 
 /* Responsive Design */
@@ -699,6 +799,11 @@
   .enhanced-card,
   .enhanced-card-dark {
     padding: 1.5rem;
+  }
+
+  .section-light,
+  .section-dark {
+    padding: 60px 0;
   }
 }
 
