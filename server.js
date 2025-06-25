@@ -218,7 +218,7 @@ app.post("/send-email", async (req, res) => {
                 <div class="contact-info"><strong>📧 Email:</strong> info@richminds.ae</div>
                 <div class="contact-info"><strong>🌐 Website:</strong> www.richminds.ae</div>
                 
-                <a href="https://wa.me/971561475759" class="whatsapp-btn">
+                <a href="https://wa.me/+971561475759" class="whatsapp-btn">
                     💬 Chat on WhatsApp
                 </a>
             </div>
