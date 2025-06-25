@@ -1,104 +1,98 @@
+// Premium Animation Features
 
-      // Premium Animation Features
+// Magnetic Effect for Interactive Elements
+function initMagneticButtons() {
+  const magneticElements = document.querySelectorAll(
+    ".submit-btn, .whatsapp-cta, .call-cta, .contact-icon"
+  );
 
-      // Magnetic Effect for Interactive Elements
-      function initMagneticButtons() {
-        const magneticElements = document.querySelectorAll(
-          ".submit-btn, .whatsapp-cta, .call-cta, .contact-icon"
-        );
+  magneticElements.forEach((element) => {
+    element.addEventListener("mousemove", (e) => {
+      const rect = element.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
 
-        magneticElements.forEach((element) => {
-          element.addEventListener("mousemove", (e) => {
-            const rect = element.getBoundingClientRect();
-            const x = e.clientX - rect.left - rect.width / 2;
-            const y = e.clientY - rect.top - rect.height / 2;
+      element.style.transform = `translate(${x * 0.15}px, ${
+        y * 0.15
+      }px) scale(1.05)`;
+      element.style.transition = "transform 0.1s ease-out";
+    });
 
-            element.style.transform = `translate(${x * 0.15}px, ${
-              y * 0.15
-            }px) scale(1.05)`;
-            element.style.transition = "transform 0.1s ease-out";
-          });
+    element.addEventListener("mouseleave", () => {
+      element.style.transform = "translate(0px, 0px) scale(1)";
+      element.style.transition = "transform 0.3s ease-out";
+    });
+  });
+}
 
-          element.addEventListener("mouseleave", () => {
-            element.style.transform = "translate(0px, 0px) scale(1)";
-            element.style.transition = "transform 0.3s ease-out";
-          });
-        });
+// Advanced Typing Effect
+function createTypingEffect() {
+  const heroTitle = document.querySelector(".contact-hero h1");
+  if (heroTitle) {
+    const text = heroTitle.textContent;
+    heroTitle.textContent = "";
+
+    let i = 0;
+    const typeInterval = setInterval(() => {
+      heroTitle.textContent += text.charAt(i);
+      i++;
+
+      if (i >= text.length) {
+        clearInterval(typeInterval);
+        // Add cursor blink effect
+        heroTitle.style.borderRight = "3px solid var(--primary-gold)";
+        setTimeout(() => {
+          heroTitle.style.borderRight = "none";
+        }, 2000);
       }
+    }, 100);
+  }
+}
 
-      // Advanced Typing Effect
-      function createTypingEffect() {
-        const heroTitle = document.querySelector(".contact-hero h1");
-        if (heroTitle) {
-          const text = heroTitle.textContent;
-          heroTitle.textContent = "";
+// 3D Card Hover Effects
+function init3DCards() {
+  document.querySelectorAll(".contact-info-card").forEach((card) => {
+    card.addEventListener("mousemove", (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
 
-          let i = 0;
-          const typeInterval = setInterval(() => {
-            heroTitle.textContent += text.charAt(i);
-            i++;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
 
-            if (i >= text.length) {
-              clearInterval(typeInterval);
-              // Add cursor blink effect
-              heroTitle.style.borderRight = "3px solid var(--primary-gold)";
-              setTimeout(() => {
-                heroTitle.style.borderRight = "none";
-              }, 2000);
-            }
-          }, 100);
-        }
-      }
+      const rotateX = (y - centerY) / 8;
+      const rotateY = (centerX - x) / 8;
 
-      // 3D Card Hover Effects
-      function init3DCards() {
-        document.querySelectorAll(".contact-info-card").forEach((card) => {
-          card.addEventListener("mousemove", (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-
-            const rotateX = (y - centerY) / 8;
-            const rotateY = (centerX - x) / 8;
-
-            card.style.transform = `
+      card.style.transform = `
               perspective(1000px) 
               rotateX(${rotateX}deg) 
               rotateY(${rotateY}deg) 
               translateY(-10px) 
               scale(1.02)
             `;
-            card.style.boxShadow = "0 25px 80px rgba(0, 0, 0, 0.2)";
-          });
+      card.style.boxShadow = "0 25px 80px rgba(0, 0, 0, 0.2)";
+    });
 
-          card.addEventListener("mouseleave", () => {
-            card.style.transform =
-              "perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px) scale(1)";
-            card.style.boxShadow = "";
-          });
-        });
-      }
+    card.addEventListener("mouseleave", () => {
+      card.style.transform =
+        "perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px) scale(1)";
+      card.style.boxShadow = "";
+    });
+  });
+}
 
-      // Dynamic Floating Elements
-      function createFloatingElements() {
-        const hero = document.querySelector(".contact-hero");
-        const icons = [
-          "fas fa-star",
-          "fas fa-heart",
-          "fas fa-gem",
-          "fas fa-award",
-        ];
+// Dynamic Floating Elements
+function createFloatingElements() {
+  const hero = document.querySelector(".contact-hero");
+  const icons = ["fas fa-star", "fas fa-heart", "fas fa-gem", "fas fa-award"];
 
-        setInterval(() => {
-          if (Math.random() > 0.7) {
-            const element = document.createElement("div");
-            element.innerHTML = `<i class="${
-              icons[Math.floor(Math.random() * icons.length)]
-            }"></i>`;
-            element.style.cssText = `
+  setInterval(() => {
+    if (Math.random() > 0.7) {
+      const element = document.createElement("div");
+      element.innerHTML = `<i class="${
+        icons[Math.floor(Math.random() * icons.length)]
+      }"></i>`;
+      element.style.cssText = `
               position: absolute;
               top: 100%;
               left: ${Math.random() * 100}%;
@@ -109,25 +103,25 @@
               z-index: 1;
             `;
 
-            hero.appendChild(element);
+      hero.appendChild(element);
 
-            setTimeout(() => {
-              element.remove();
-            }, 8000);
-          }
-        }, 2000);
-      }
+      setTimeout(() => {
+        element.remove();
+      }, 8000);
+    }
+  }, 2000);
+}
 
-      // Enhanced Form Interactions
-      function enhanceFormAnimations() {
-        const form = document.getElementById("contactForm");
-        const inputs = form.querySelectorAll(".form-control");
+// Enhanced Form Interactions
+function enhanceFormAnimations() {
+  const form = document.getElementById("contactForm");
+  const inputs = form.querySelectorAll(".form-control");
 
-        inputs.forEach((input) => {
-          // Focus wave effect
-          input.addEventListener("focus", function () {
-            const wave = document.createElement("div");
-            wave.style.cssText = `
+  inputs.forEach((input) => {
+    // Focus wave effect
+    input.addEventListener("focus", function () {
+      const wave = document.createElement("div");
+      wave.style.cssText = `
               position: absolute;
               top: 0;
               left: 0;
@@ -140,59 +134,57 @@
               z-index: -1;
             `;
 
-            this.parentElement.appendChild(wave);
+      this.parentElement.appendChild(wave);
 
-            setTimeout(() => {
-              wave.remove();
-            }, 1000);
-          });
+      setTimeout(() => {
+        wave.remove();
+      }, 1000);
+    });
 
-          // Success pulse effect
-          input.addEventListener("input", function () {
-            if (this.checkValidity() && this.value.length > 0) {
-              this.style.animation = "successPulse 0.5s ease-out";
-              setTimeout(() => {
-                this.style.animation = "";
-              }, 500);
-            }
-          });
-        });
+    // Success pulse effect
+    input.addEventListener("input", function () {
+      if (this.checkValidity() && this.value.length > 0) {
+        this.style.animation = "successPulse 0.5s ease-out";
+        setTimeout(() => {
+          this.style.animation = "";
+        }, 500);
       }
+    });
+  });
+}
 
-      // Scroll-triggered Animations
-      function initScrollAnimations() {
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("animate-visible");
-              }
-            });
-          },
-          {
-            threshold: 0.1,
-            rootMargin: "0px 0px -50px 0px",
-          }
-        );
+// Scroll-triggered Animations
+function initScrollAnimations() {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-visible");
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px",
+    }
+  );
 
-        // Observe all animatable elements
-        document
-          .querySelectorAll(
-            ".contact-info-card, .form-group, .contact-info-text"
-          )
-          .forEach((el) => {
-            el.classList.add("animate-hidden");
-            observer.observe(el);
-          });
-      }
+  // Observe all animatable elements
+  document
+    .querySelectorAll(".contact-info-card, .form-group, .contact-info-text")
+    .forEach((el) => {
+      el.classList.add("animate-hidden");
+      observer.observe(el);
+    });
+}
 
-      // Background Animation
-      function initBackgroundAnimation() {
-        const hero = document.querySelector(".contact-hero");
+// Background Animation
+function initBackgroundAnimation() {
+  const hero = document.querySelector(".contact-hero");
 
-        // Create animated background overlay
-        const overlay = document.createElement("div");
-        overlay.style.cssText = `
+  // Create animated background overlay
+  const overlay = document.createElement("div");
+  overlay.style.cssText = `
           position: absolute;
           top: 0;
           left: 0;
@@ -211,12 +203,12 @@
           z-index: 2;
         `;
 
-        hero.appendChild(overlay);
-      }
+  hero.appendChild(overlay);
+}
 
-      // Add all animation CSS
-      const animationCSS = document.createElement("style");
-      animationCSS.textContent = `
+// Add all animation CSS
+const animationCSS = document.createElement("style");
+animationCSS.textContent = `
         @keyframes floatUp {
           0% {
             transform: translateY(0) rotate(0deg);
@@ -300,36 +292,35 @@
           }
         }
       `;
-      document.head.appendChild(animationCSS);
+document.head.appendChild(animationCSS);
 
-      // Initialize all premium features
-      document.addEventListener("DOMContentLoaded", function () {
-        // Add delay to ensure all elements are loaded
-        setTimeout(() => {
-          initMagneticButtons();
-          init3DCards();
-          enhanceFormAnimations();
-          initScrollAnimations();
-          initBackgroundAnimation();
+// Initialize all premium features
+document.addEventListener("DOMContentLoaded", function () {
+  // Add delay to ensure all elements are loaded
+  setTimeout(() => {
+    initMagneticButtons();
+    init3DCards();
+    enhanceFormAnimations();
+    initScrollAnimations();
+    initBackgroundAnimation();
 
-          // Start dynamic elements
-          setTimeout(() => {
-            createFloatingElements();
-            createTypingEffect();
-          }, 1000);
-        }, 500);
-      });
+    // Start dynamic elements
+    setTimeout(() => {
+      createFloatingElements();
+      createTypingEffect();
+    }, 1000);
+  }, 500);
+});
 
-      console.log("🎨✨ Premium Contact Page Animations Loaded!");
-      console.log(
-        "🚀 Features: 3D Effects, Magnetic Interactions, Dynamic Background, Scroll Animations"
+console.log("🎨✨ Premium Contact Page Animations Loaded!");
+console.log(
+  "🚀 Features: 3D Effects, Magnetic Interactions, Dynamic Background, Scroll Animations"
 );
-      
 
-  // Scroll progress indicator
-  function createScrollProgress() {
-    const progressBar = document.createElement("div");
-    progressBar.style.cssText = `
+// Scroll progress indicator
+function createScrollProgress() {
+  const progressBar = document.createElement("div");
+  progressBar.style.cssText = `
             position: fixed;
             top: 0;
             left: 0;
@@ -339,14 +330,132 @@
             z-index: 9999;
             transition: width 0.3s ease;
         `;
-    document.body.appendChild(progressBar);
+  document.body.appendChild(progressBar);
 
-    window.addEventListener("scroll", function () {
-      const scrollTop = window.pageYOffset;
-      const docHeight = document.body.scrollHeight - window.innerHeight;
-      const scrollPercent = (scrollTop / docHeight) * 100;
-      progressBar.style.width = scrollPercent + "%";
+  window.addEventListener("scroll", function () {
+    const scrollTop = window.pageYOffset;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    progressBar.style.width = scrollPercent + "%";
+  });
+}
+
+createScrollProgress();
+
+// Contact Form Submission
+function initContactForm() {
+  const form = document.getElementById("contactForm");
+  const submitBtn = document.getElementById("submitBtn");
+  const successMessage = document.getElementById("successMessage");
+  const errorMessage = document.getElementById("errorMessage");
+
+  if (form) {
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      // Show loading state
+      const originalBtnText = submitBtn.innerHTML;
+      submitBtn.innerHTML =
+        '<i class="fas fa-spinner fa-spin me-2"></i><span data-en="Sending..." data-ar="جاري الإرسال...">Sending...</span>';
+      submitBtn.disabled = true;
+
+      // Hide previous messages
+      successMessage.style.display = "none";
+      errorMessage.style.display = "none";
+
+      // Get form data
+      const formData = {
+        fullName: document.getElementById("fullName").value.trim(),
+        phone: document.getElementById("phone").value.trim(),
+        email: document.getElementById("email").value.trim(),
+        service: document.getElementById("service").value,
+        message: document.getElementById("message").value.trim(),
+      };
+
+      // Validate required fields
+      if (
+        !formData.fullName ||
+        !formData.phone ||
+        !formData.email ||
+        !formData.message
+      ) {
+        showError("Please fill in all required fields.");
+        resetButton();
+        return;
+      }
+
+      // Validate email format
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(formData.email)) {
+        showError("Please enter a valid email address.");
+        resetButton();
+        return;
+      }
+
+      // Validate phone number (basic validation)
+      const phoneRegex = /^[\+]?[0-9\s\-\(\)]{7,}$/;
+      if (!phoneRegex.test(formData.phone)) {
+        showError("Please enter a valid phone number.");
+        resetButton();
+        return;
+      }
+
+      try {
+        // Send data to server
+        const response = await fetch("/send-email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          showSuccess(result.message);
+          form.reset();
+
+          // Add success animation
+          successMessage.style.animation = "successPulse 0.6s ease-out";
+          setTimeout(() => {
+            successMessage.style.animation = "";
+          }, 600);
+        } else {
+          showError(
+            result.message || "Failed to send message. Please try again."
+          );
+        }
+      } catch (error) {
+        console.error("Error sending email:", error);
+        showError("Network error. Please check your connection and try again.");
+      }
+
+      resetButton();
+
+      function resetButton() {
+        submitBtn.innerHTML = originalBtnText;
+        submitBtn.disabled = false;
+      }
+
+      function showSuccess(message) {
+        successMessage.querySelector("span").textContent = message;
+        successMessage.style.display = "block";
+        successMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+
+      function showError(message) {
+        errorMessage.querySelector("span").textContent = message;
+        errorMessage.style.display = "block";
+        errorMessage.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
     });
   }
+}
 
-  createScrollProgress();
+// Initialize contact form when DOM is loaded
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initContactForm);
+} else {
+  initContactForm();
+}

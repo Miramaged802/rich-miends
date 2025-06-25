@@ -1,0 +1,11 @@
+# Environment variables
+.env
+
+# Node.js
+node_modules/
+*.log
+
+# Optional files
+.npm
+.eslintcache
+*.tgz
