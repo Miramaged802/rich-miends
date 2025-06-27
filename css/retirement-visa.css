@@ -832,6 +832,7 @@
   .feature-item,
   .requirement-item {
     flex-direction: column;
+    align-items: center;
     text-align: center;
     gap: 1rem;
   }
